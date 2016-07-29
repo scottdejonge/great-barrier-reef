@@ -40,8 +40,10 @@ let categories = [];
 let backgroundColor = '#27262D';
 
 // KML Overlay
-let kmlLayer;
-let kmlLayerUrl = 'http://scottdejonge.com/great-barrier-reef/src/kml/marine-park.kml';
+let layers = [];
+const reefLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/reefs.kml';
+const parkLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/marine-park.kml';
+const zonesLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/zones.kmz';
 
 // Street View
 let panorama;
@@ -221,8 +223,9 @@ function createKMLOverlay() {
 		map: map
 	};
 
-	// KML Layer
-	kmlLayer = new google.maps.KmlLayer(kmlLayerUrl, kmlOptions);
+	layers[0] = new google.maps.KmlLayer(reefLayerURl, kmlOptions);
+	layers[1] = new google.maps.KmlLayer(parkLayerURl, kmlOptions);
+	layers[2] = new google.maps.KmlLayer(zonesLayerURl, kmlOptions);
 }
 
 
