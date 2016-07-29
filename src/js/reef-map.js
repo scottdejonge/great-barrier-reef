@@ -41,7 +41,7 @@ let backgroundColor = '#27262D';
 
 // KML Overlay
 let kmlLayer;
-let kmlLayerUrl = 'https://www.barrierreef.org/assets/map/kml/marine-park.kml';
+let kmlLayerUrl = 'http://scottdejonge.com/great-barrier-reef/src/kml/marine-park.kml';
 
 // Street View
 let panorama;
