@@ -266,15 +266,14 @@ function createMarker(location, i) {
 	// Create Marker Object
 	const marker = new google.maps.Marker({
 		map: map,
-		icon: icon,
+		// icon: icon,
 		position: latLng,
 		zIndex: zIndex,
-		title: (location.title ? location.title : null),
-		category: (location.category ? location.category : null),
-		streetViewId: (location.street_view_id ? location.street_view_id : null),
-		zoom: (location.zoom ? location.zoom : null),
-		content: (location.content ? location.content : null),
-		image: (location.image ? location.image : null)
+		title: location.title,
+		category: location.category,
+		streetViewId: location.streetViewId,
+		zoom: location.zoom,
+		content: location.content
 	});
 
 	// Marker click event Update Info
