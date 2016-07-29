@@ -56,10 +56,10 @@ const markerHeight = markerWidth;
 const $filter = $('[data-filter]');
 
 // Map Styles
-const mapStyles = require('json!../json/styles.json');
+const mapStyles = JSON.parse(require('../json/styles.json'));
 
 // Map Locations
-let locations = require('json!../json/location.json');
+let locations = JSON.parse(require('../json/locations.json'));
 
 
 /**
