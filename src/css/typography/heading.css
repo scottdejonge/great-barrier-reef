@@ -1,0 +1,32 @@
+h1,
+h2,
+h3 {
+	font-family: $serif;
+	font-weight: normal;
+	color: $dark-grey;
+	line-height: 1.35;
+	letter-spacing: 0.005em;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1 {
+	margin: 2em 0 0.5em;
+	font-size: 3.2rem;
+}
+
+h2 {
+	margin: 2em 0 0.5em;
+	font-size: 2.4rem;
+}
+
+h3 {
+	margin: 1em 0 0.5em;
+	font-size: 2.0rem;
+}

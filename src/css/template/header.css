@@ -1,0 +1,25 @@
+.header {
+	
+}
+
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+		.header-title {
+			margin: 0;
+			font-size: 1.8rem;
+
+			a {
+				color: $dark-grey;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					color: $dark-grey;
+					text-decoration: none;
+				}
+			}
+		}

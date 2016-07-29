@@ -1,0 +1,14 @@
+a {
+	color: $primary;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		color: $dark;
+		text-decoration: underline;
+	}
+
+	&:visited {
+		
+	}
+}

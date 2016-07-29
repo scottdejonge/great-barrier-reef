@@ -1,0 +1,28 @@
+# Site settings
+title: Great Barrier Reef
+email: dejonge.scott@gmail.com
+description: 
+
+# Server
+baseurl: "/great-barrier-reef"
+destination: _site
+host: 0.0.0.0
+port: 4001
+url: http://scottdejonge.github.io
+encoding: UTF-8
+exclude: []
+
+# Collections
+# collections:
+#   reefs:
+#     output: true
+#     permalink: /reefs/:path/
+
+# URLs
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+
+# Repo
+repo: https://github.com/scottdejonge/great-barrier-reef
