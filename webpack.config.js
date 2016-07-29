@@ -9,7 +9,7 @@ module.exports = {
     bundle: './src/index.js',
   },
   output: {
-    path: __dirname + '/webroot/dist',
+    path: __dirname + '/dist',
     publicPath: '/',
     filename: '[name].js'
   },
@@ -26,7 +26,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['es2015']
         },
         include: [
           path.join(__dirname, 'src'),
