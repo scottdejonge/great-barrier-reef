@@ -1,10 +1,10 @@
 // require('./css/main.css');
-require('babel-polyfill');
 
 /*
  * Requires
  */
 
+import 'babel-polyfill'
 import $ from 'jquery'
 
 
