@@ -35,12 +35,13 @@ $white: #FFF;
 $black: #000;
 $light: #EEE;
 $light-grey: #DDD;
-$grey: #666;
-$dark-grey: #444;
-$dark: #333;
+$grey: #555;
+$dark-grey: #333;
+$dark: #222;
 
 /* Palette */
-$primary: #177CAF;
+$primary: #2A26EA;
+$secondary: #03DBC3;
 
 
 /**
