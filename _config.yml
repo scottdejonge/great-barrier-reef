@@ -10,7 +10,9 @@ host: 0.0.0.0
 port: 4001
 url: http://scottdejonge.github.io
 encoding: UTF-8
-exclude: []
+
+# Excludes
+exclude: ["node_modules", "Gemfile", "Gemfile.lock", "commit-hook.sh", "package.json"]
 
 # Collections
 # collections:
@@ -23,6 +25,12 @@ permalink: pretty
 
 # Build settings
 markdown: kramdown
+
+# Syntax Highlighting
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 # Repo
 repo: https://github.com/scottdejonge/great-barrier-reef
