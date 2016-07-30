@@ -102,10 +102,10 @@ function createMap($map) {
 		panControl: true,
 		zoomControl: true,
 		zoomControlOptions: {
-			position: google.maps.ControlPosition.LEFT_TOP
+			position: google.maps.ControlPosition.RIGHT_TOP
 		},
 		scaleControl: true,
-		scrollwheel: false,
+		scrollwheel: true,
 		mapTypeControl: false,
 		streetViewControl: false,
 		overviewMapControl: false,
@@ -192,11 +192,11 @@ function createPanorama() {
 		addressControl: false,
 		panControl: true,
 		panControlOptions: {
-			position: google.maps.ControlPosition.LEFT_TOP
+			position: google.maps.ControlPosition.RIGHT_TOP
 		},
 		zoomControl: true,
 		zoomControlOptions: {
-			position: google.maps.ControlPosition.LEFT_TOP
+			position: google.maps.ControlPosition.RIGHT_TOP
 		},
 		scrollwheel: false
 	}
