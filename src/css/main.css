@@ -77,4 +77,5 @@
  * Component
  */
 
-@import './component/policy';
+@import './component/card';
+@import './component/map';

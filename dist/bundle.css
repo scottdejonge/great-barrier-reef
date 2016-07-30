@@ -840,7 +840,7 @@ nav a {
  * Component
  */
 
-.policy {
+.card {
 	display: block;
 	padding: 1.5rem;
 	color: #333;
@@ -848,17 +848,17 @@ nav a {
 	border: 1px solid #DDD
 }
 
-.policy:not(:last-child) {
+.card:not(:last-child) {
     margin-bottom: 2rem;
 }
 
-.policy:hover, .policy:focus {
+.card:hover, .card:focus {
     color: #2A26EA;
     text-decoration: none;
     border: 1px solid #2A26EA;
 }
 
-.policy-title {
+.card-title {
 		margin: 0;
 		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 		font-weight: 400;
@@ -866,8 +866,14 @@ nav a {
 		color: currentColor;
 	}
 
-.policy-description {
+.card-description {
 		margin: 0.5em 0;
 		color: currentColor;
 	}
+
+.map {
+	width: 100vw;
+	height: 100vh;
+}
+
 /*# sourceMappingURL=bundle.css.map*/

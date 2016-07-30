@@ -12,7 +12,7 @@ import $ from 'jquery'
  * Modules
  */
 
-import * as ReefMap from './js/reef-map';
+import * as ReefMap from './js/map';
 
 
 /*

@@ -16,17 +16,17 @@ const API_KEY = 'AIzaSyCHSXxaBYz6cEYOiU4XfaaurReMcCa0oT4';
 const IMAGE_SIZE = '480x320';
 
 // DOM Elements
-const $map = $('[data-reef-map]');
+const $map = $('[data-map]');
 
 // Buttons
-const $buttonReset = $('[data-reef-button-reset]');
-const $buttonIsland = $('[data-reef-button-island]');
-const $buttonPanorama = $('[data-reef-button-panorama]');
+const $buttonReset = $('[data-button-reset]');
+const $buttonIsland = $('[data-button-island]');
+const $buttonPanorama = $('[data-button-panorama]');
 
 // Info
-const $info = $('[data-reef-info]');
-const $infoImage = $('[data-reef-info-image]');
-const $infoBody = $('[data-reef-info-body]');
+const $info = $('[data-info]');
+const $infoImage = $('[data-info-image]');
+const $infoBody = $('[data-info-body]');
 const INIT_IMAGE_SRC = $infoImage.prop('src');
 const INIT_CONTENT = $infoBody.html();
 

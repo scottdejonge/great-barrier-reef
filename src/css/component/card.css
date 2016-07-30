@@ -1,4 +1,4 @@
-.policy {
+.card {
 	display: block;
 	padding: 1.5rem;
 	color: $dark-grey;
@@ -17,7 +17,7 @@
 	}
 }
 
-	.policy-title {
+	.card-title {
 		margin: 0;
 		font-family: $sans-serif;
 		font-weight: 400;
@@ -25,7 +25,7 @@
 		color: currentColor;
 	}
 
-	.policy-description {
+	.card-description {
 		margin: 0.5em 0;
 		color: currentColor;
 	}
