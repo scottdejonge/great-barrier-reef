@@ -45,7 +45,7 @@ let StreetViewService;
 const streetViewRadius = 500;
 
 // Marker Sizes
-const markerWidth = 28;
+const markerWidth = 18;
 const markerHeight = markerWidth;
 
 // Filter
