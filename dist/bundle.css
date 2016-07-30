@@ -879,6 +879,7 @@ nav a {
 		}
 
 .sidebar-header-subtitle {
+			margin-bottom: 0.2em;
 			font-size: 1.6rem;
 		}
 
@@ -888,8 +889,26 @@ nav a {
 
 .sidebar-footer {
 		flex: 0 0 auto;
+		align-items: center;
 		border-top: 1px solid #DDD;
 	}
+
+.sidebar-footer-nav {
+			display: flex;
+			justify-content: space-between;
+		}
+
+.sidebar-footer-nav a {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #555;
+    text-decoration: none
+}
+
+.sidebar-footer-nav a:hover, .sidebar-footer-nav a:focus {
+    color: #2A26EA;
+    text-decoration: underline;
+}
 
 .footer {
 	text-align: center;

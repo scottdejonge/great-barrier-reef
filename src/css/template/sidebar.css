@@ -64,6 +64,7 @@
 		}
 
 		.sidebar-header-subtitle {
+			margin-bottom: 0.2em;
 			font-size: 1.6rem;
 		}
 
@@ -73,5 +74,24 @@
 
 	.sidebar-footer {
 		flex: 0 0 auto;
+		align-items: center;
 		border-top: 1px solid $light-grey;
 	}
+
+		.sidebar-footer-nav {
+			display: flex;
+			justify-content: space-between;
+
+			a {
+				display: inline-block;
+				font-size: 1.2rem;
+				color: $grey;
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					color: $primary;
+					text-decoration: underline;
+				}
+			}
+		}

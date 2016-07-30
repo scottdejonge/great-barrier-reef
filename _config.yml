@@ -34,3 +34,7 @@ kramdown:
 
 # Repo
 repo: https://github.com/scottdejonge/great-barrier-reef
+
+# Custom vars
+current_version: v0.0.1
+twitter: https://twitter.com/scottdejonge
