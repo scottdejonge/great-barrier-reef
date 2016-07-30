@@ -41,12 +41,12 @@ let backgroundColor = '#27262D';
 
 // KML Overlay
 let layers = [];
-const reefLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/reefs.kml';
-const parkLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/marine-park.kml';
-const zonesEstuaryLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/zones-estuary.kml';
-const zonesIslandLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/zones-island.kml';
-const zonesLandLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/zones-land.kml';
-const zonesSeaLayerURl = 'http://scottdejonge.com/great-barrier-reef/src/kml/zones-sea.kml';
+const reefLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/reefs.kml';
+const parkLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/marine-park.kml';
+const zonesEstuaryLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/zones-estuary.kml';
+const zonesIslandLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/zones-island.kml';
+const zonesLandLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/zones-land.kml';
+const zonesSeaLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/zones-sea.kml';
 
 // Street View
 let panorama;
