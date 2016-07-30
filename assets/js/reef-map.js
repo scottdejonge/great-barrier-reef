@@ -12,6 +12,9 @@ import $ from 'jquery'
 // API Key
 const API_KEY = 'AIzaSyCHSXxaBYz6cEYOiU4XfaaurReMcCa0oT4';
 
+// Site URL
+const SITE_URL = 'http://scottdejonge.com/great-barrier-reef/';
+
 // Image Size
 const IMAGE_SIZE = '480x320';
 
@@ -41,12 +44,13 @@ let backgroundColor = '#27262D';
 
 // KML Overlay
 let layers = [];
-const reefLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/reefs.kml';
-const parkLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/marine-park.kml';
-const zonesEstuaryLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/zones-estuary.kml';
-const zonesIslandLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/zones-island.kml';
-const zonesLandLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/zones-land.kml';
-const zonesSeaLayerURl = 'http://scottdejonge.com/great-barrier-reef/assets/kml/zones-sea.kml';
+const parkLayerUrl = SITE_URL + 'src/kml/marine-park.kml';
+const reefLayerUrl = SITE_URL + 'src/kml/reefs.kml';
+const islandsLayerUrl = SITE_URL + 'src/kml/islands.kml';
+const zonesEstuaryLayerUrl = SITE_URL + 'src/kml/zones-estuary.kml';
+const zonesIslandLayerUrl = SITE_URL + 'src/kml/zones-island.kml';
+const zonesLandLayerUrl = SITE_URL + 'src/kml/zones-land.kml';
+const zonesSeaLayerUrl = SITE_URL + 'src/kml/zones-sea.kml';
 
 // Street View
 let panorama;
@@ -226,12 +230,13 @@ function createKMLOverlay() {
 		map: map
 	};
 
-	layers[0] = new google.maps.KmlLayer(reefLayerURl, kmlOptions);
-	layers[1] = new google.maps.KmlLayer(parkLayerURl, kmlOptions);
-	layers[2] = new google.maps.KmlLayer(zonesEstuaryLayerURl, kmlOptions);
-	layers[3] = new google.maps.KmlLayer(zonesIslandLayerURl, kmlOptions);
-	layers[4] = new google.maps.KmlLayer(zonesLandLayerURl, kmlOptions);
-	layers[5] = new google.maps.KmlLayer(zonesSeaLayerURl, kmlOptions);
+	layers[0] = new google.maps.KmlLayer(parkLayerUrl, kmlOptions);
+	layers[1] = new google.maps.KmlLayer(reefLayerUrl, kmlOptions);
+	layers[2] = new google.maps.KmlLayer(islandsLayerUrl, kmlOptions);
+	layers[3] = new google.maps.KmlLayer(zonesEstuaryLayerUrl, kmlOptions);
+	layers[4] = new google.maps.KmlLayer(zonesIslandLayerUrl, kmlOptions);
+	layers[5] = new google.maps.KmlLayer(zonesLandLayerUrl, kmlOptions);
+	layers[6] = new google.maps.KmlLayer(zonesSeaLayerUrl, kmlOptions);
 }
 
 
