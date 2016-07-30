@@ -14,6 +14,17 @@ The Great Barrier Reef is the largest living ecosystem on Earth. Explore the Gre
 * Markdown
 * Webpack
 
+## Acknowledgements
+
+### Images
+
+#### Underwater photo
+
+[Kyle Taylor](https://www.flickr.com/photos/kyletaylor/) Attribution 2.0 Generic [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) 
+
+#### Aerial photo
+
+[FarbenfroheWunderwelt](https://www.flickr.com/photos/farbenfrohewunderwelt/) Attribution-NoDerivs 2.0 Generic [CC BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/) 
 
 ## Data Sources
 
