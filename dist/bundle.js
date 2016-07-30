@@ -19224,6 +19224,7 @@
 	var bounds = void 0;
 	var infowindow = void 0;
 	var markers = [];
+	var layers = [];
 	var categories = [];
 	var backgroundColor = '#EEEEEE';
 	
@@ -19243,7 +19244,7 @@
 	var styles = JSON.parse(__webpack_require__(/*! ../json/styles.json */ 301));
 	
 	// Map Layers
-	var layers = JSON.parse(__webpack_require__(/*! ../json/layers.json */ 302));
+	var overlays = JSON.parse(__webpack_require__(/*! ../json/overlays.json */ 302));
 	
 	// Map Dives
 	var dives = JSON.parse(__webpack_require__(/*! ../json/dives.json */ 303));
@@ -19306,17 +19307,28 @@
 		// Create Panorama
 		createPanorama();
 	
-		// Create KML Overlay
-		createKMLOverlay();
-	
 		// Street View Service
 		StreetViewService = new google.maps.StreetViewService();
 	
 		// Create Bounds object
 		bounds = new google.maps.LatLngBounds();
 	
+		// KML Overlay
+		var kmlOptions = {
+			map: map,
+			url: 'http://greatbarrierreef.io/src/kml/marine-park.kml',
+			suppressInfoWindows: true,
+			preserveViewport: false
+		};
+	
+		// Create Map Layer
+		var outline = new google.maps.KmlLayer(kmlOptions);
+	
 		// init Filters
-		// initFilters();
+		initFilters();
+	
+		// Create KML Overlay
+		createKMLOverlays();
 	
 		// Create Markers for Dives
 		if (dives) {
@@ -19394,17 +19406,30 @@
 	 * Create KML Overlay
 	 */
 	
-	function createKMLOverlay() {
+	function createKMLOverlays() {
 	
-		// KML Overlay
-		var kmlOptions = {
-			suppressInfoWindows: true,
-			preserveViewport: false,
-			map: map
-		};
+		_jquery2.default.each(overlays, function (i, overlay) {
 	
-		_jquery2.default.each(layers, function (i, layer) {
-			var mapLayer = new google.maps.KmlLayer(layer.url, kmlOptions);
+			// KML Overlay
+			var kmlOptions = {
+				map: map,
+				url: overlay.url,
+				category: overlay.category,
+				suppressInfoWindows: true,
+				preserveViewport: false
+			};
+	
+			// Create Map Layer
+			var layer = new google.maps.KmlLayer(kmlOptions);
+	
+			if (_jquery2.default.inArray(overlay.category, categories) != -1) {
+				layer.setMap(map);
+			} else {
+				layer.setMap(null);
+			}
+	
+			//Add layer to layers
+			layers.push(layer);
 		});
 	}
 	
@@ -19462,13 +19487,13 @@
 			markerClick(this);
 		});
 	
-		// if ($.inArray(location.category, categories) != -1) {
-		// 	marker.setVisible(true);
-		// } else {
-		// 	marker.setVisible(false);
-		// }
+		if (_jquery2.default.inArray(location.category, categories) != -1) {
+			marker.setVisible(true);
+		} else {
+			marker.setVisible(false);
+		}
 	
-		//Add Marker to markers
+		//Add marker to markers
 		markers.push(marker);
 	
 		// Extend Map Bounds
@@ -19573,6 +19598,7 @@
 				categories.push(category);
 			}
 	
+			filterLayers(categories);
 			filterMarkers(categories);
 		});
 	}
@@ -19583,8 +19609,7 @@
 	
 	function filterMarkers(category) {
 	
-		_jquery2.default.each(markers, function (i, location) {
-			var marker = markers[i];
+		_jquery2.default.each(markers, function (i, marker) {
 	
 			// Category is in active categories
 			if (_jquery2.default.inArray(marker.category, categories) != -1) {
@@ -19592,6 +19617,24 @@
 			} else {
 				// Categories don't match 
 				marker.setVisible(false);
+			}
+		});
+	}
+	
+	/**
+	 * Function to filter layers by category
+	 */
+	
+	function filterLayers(category) {
+	
+		_jquery2.default.each(layers, function (i, layer) {
+	
+			// Category is in active categories
+			if (_jquery2.default.inArray(layer.category, categories) != -1) {
+				layer.setMap(map);
+			} else {
+				// Categories don't match 
+				layer.setMap(null);
 			}
 		});
 	}
@@ -19714,12 +19757,12 @@
 
 /***/ },
 /* 302 */
-/*!******************************!*\
-  !*** ./src/json/layers.json ***!
-  \******************************/
+/*!********************************!*\
+  !*** ./src/json/overlays.json ***!
+  \********************************/
 /***/ function(module, exports) {
 
-	module.exports = "[\n  {\n    \"name\": \"park\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/marine-park.kml\"\n  },\n  {\n    \"name\": \"reefs\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/reefs.kml\"\n  },\n  {\n    \"name\": \"estuary\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-estuary.kml\"\n  },\n  {\n    \"name\": \"island\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-island.kml\"\n  },\n  {\n    \"name\": \"land\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-land.kml\"\n  },\n  {\n    \"name\": \"sea\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-sea.kml\"\n  },\n  {\n    \"name\": \"islands-a-l\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-a-l.kml\"\n  },\n  {\n    \"name\": \"islands-l-q\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-l-q.kml\"\n  },\n  {\n    \"name\": \"islands-q-z\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-q-z.kml\"\n  }\n]"
+	module.exports = "[\n  {\n    \"name\": \"reefs\",\n    \"category\": \"reef\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/reefs.kml\"\n  },\n  {\n    \"name\": \"estuary\",\n    \"category\": \"zone\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-estuary.kml\"\n  },\n  {\n    \"name\": \"island\",\n    \"category\": \"zone\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-island.kml\"\n  },\n  {\n    \"name\": \"land\",\n    \"category\": \"zone\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-land.kml\"\n  },\n  {\n    \"name\": \"sea\",\n    \"category\": \"zone\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-sea.kml\"\n  },\n  {\n    \"name\": \"islands-a-l\",\n    \"category\": \"island\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-a-l.kml\"\n  },\n  {\n    \"name\": \"islands-l-q\",\n    \"category\": \"island\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-l-q.kml\"\n  },\n  {\n    \"name\": \"islands-q-z\",\n    \"category\": \"island\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-q-z.kml\"\n  }\n]"
 
 /***/ },
 /* 303 */

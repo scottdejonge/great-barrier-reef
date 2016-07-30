@@ -1,38 +1,42 @@
 [
   {
-    "name": "park",
-    "url": "http://greatbarrierreef.io/src/kml/marine-park.kml"
-  },
-  {
     "name": "reefs",
+    "category": "reef",
     "url": "http://greatbarrierreef.io/src/kml/reefs.kml"
   },
   {
     "name": "estuary",
+    "category": "zone",
     "url": "http://greatbarrierreef.io/src/kml/zones-estuary.kml"
   },
   {
     "name": "island",
+    "category": "zone",
     "url": "http://greatbarrierreef.io/src/kml/zones-island.kml"
   },
   {
     "name": "land",
+    "category": "zone",
     "url": "http://greatbarrierreef.io/src/kml/zones-land.kml"
   },
   {
     "name": "sea",
+    "category": "zone",
     "url": "http://greatbarrierreef.io/src/kml/zones-sea.kml"
   },
   {
     "name": "islands-a-l",
+    "category": "island",
     "url": "http://greatbarrierreef.io/src/kml/islands-a-l.kml"
   },
   {
     "name": "islands-l-q",
+    "category": "island",
     "url": "http://greatbarrierreef.io/src/kml/islands-l-q.kml"
   },
   {
     "name": "islands-q-z",
+    "category": "island",
     "url": "http://greatbarrierreef.io/src/kml/islands-q-z.kml"
   }
 ]

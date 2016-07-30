@@ -36,6 +36,7 @@ let canvas;
 let bounds;
 let infowindow;
 let markers = [];
+let layers = [];
 let categories = [];
 let backgroundColor = '#EEEEEE';
 
@@ -55,7 +56,7 @@ const $filter = $('[data-filter]');
 const styles = JSON.parse(require('../json/styles.json'));
 
 // Map Layers
-const layers = JSON.parse(require('../json/layers.json'));
+const overlays = JSON.parse(require('../json/overlays.json'));
 
 // Map Dives
 const dives = JSON.parse(require('../json/dives.json'));
@@ -121,17 +122,28 @@ function createMap($map) {
 	// Create Panorama
 	createPanorama();
 
-	// Create KML Overlay
-	createKMLOverlay();
-
 	// Street View Service
 	StreetViewService = new google.maps.StreetViewService();
 
 	// Create Bounds object
 	bounds = new google.maps.LatLngBounds();
 
+	// KML Overlay
+	const kmlOptions = {
+		map: map,
+		url: 'http://greatbarrierreef.io/src/kml/marine-park.kml',
+		suppressInfoWindows: true,
+		preserveViewport: false
+	};
+
+	// Create Map Layer
+	let outline = new google.maps.KmlLayer(kmlOptions);
+
 	// init Filters
-	// initFilters();
+	initFilters();
+
+	// Create KML Overlay
+	createKMLOverlays();
 	
 	// Create Markers for Dives
 	if (dives) {
@@ -211,17 +223,30 @@ function createPanorama() {
  * Create KML Overlay
  */
 
-function createKMLOverlay() {
+function createKMLOverlays() {
 
-	// KML Overlay
-	const kmlOptions = {
-		suppressInfoWindows: true,
-		preserveViewport: false,
-		map: map
-	};
+	$.each(overlays, function(i, overlay) {
 
-	$.each(layers, function(i, layer) {
-		let mapLayer = new google.maps.KmlLayer(layer.url, kmlOptions);
+		// KML Overlay
+		const kmlOptions = {
+			map: map,
+			url: overlay.url,
+			category: overlay.category,
+			suppressInfoWindows: true,
+			preserveViewport: false
+		};
+
+		// Create Map Layer
+		let layer = new google.maps.KmlLayer(kmlOptions);
+
+		if ($.inArray(overlay.category, categories) != -1) {
+			layer.setMap(map);
+		} else {
+			layer.setMap(null);
+		}
+
+		//Add layer to layers
+		layers.push(layer);
 	});
 }
 
@@ -281,13 +306,13 @@ function createMarker(location, i) {
 		markerClick(this);
 	});
 
-	// if ($.inArray(location.category, categories) != -1) {
-	// 	marker.setVisible(true);
-	// } else {
-	// 	marker.setVisible(false);
-	// }
+	if ($.inArray(location.category, categories) != -1) {
+		marker.setVisible(true);
+	} else {
+		marker.setVisible(false);
+	}
 
-	//Add Marker to markers
+	//Add marker to markers
 	markers.push(marker);
 
 	// Extend Map Bounds
@@ -397,6 +422,7 @@ function initFilters() {
 			categories.push(category);
 		}
 
+		filterLayers(categories);
 		filterMarkers(categories);
 	});
 }
@@ -408,8 +434,7 @@ function initFilters() {
 
 function filterMarkers(category) {
 
-	$.each(markers, function(i, location) {
-		let marker = markers[i];
+	$.each(markers, function(i, marker) {
 
 		// Category is in active categories
 		if ($.inArray(marker.category, categories) != -1) {
@@ -417,6 +442,26 @@ function filterMarkers(category) {
 		} else {
 			// Categories don't match 
 			marker.setVisible(false);
+		}
+	});
+}
+
+
+
+/**
+ * Function to filter layers by category
+ */
+
+function filterLayers(category) {
+
+	$.each(layers, function(i, layer) {
+
+		// Category is in active categories
+		if ($.inArray(layer.category, categories) != -1) {
+			layer.setMap(map);
+		} else {
+			// Categories don't match 
+			layer.setMap(null);
 		}
 	});
 }
