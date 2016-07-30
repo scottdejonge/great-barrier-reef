@@ -8,18 +8,6 @@
     "url": "http://greatbarrierreef.io/src/kml/reefs.kml"
   },
   {
-    "name": "islands-a-l",
-    "url": "http://greatbarrierreef.io/src/kml/islands-a-l.kml"
-  },
-  {
-    "name": "islands-l-q",
-    "url": "http://greatbarrierreef.io/src/kml/islands-l-q.kml"
-  },
-  {
-    "name": "islands-q-z",
-    "url": "http://greatbarrierreef.io/src/kml/islands-q-z.kml"
-  },
-  {
     "name": "estuary",
     "url": "http://greatbarrierreef.io/src/kml/zones-estuary.kml"
   },
@@ -34,5 +22,17 @@
   {
     "name": "sea",
     "url": "http://greatbarrierreef.io/src/kml/zones-sea.kml"
+  },
+  {
+    "name": "islands-a-l",
+    "url": "http://greatbarrierreef.io/src/kml/islands-a-l.kml"
+  },
+  {
+    "name": "islands-l-q",
+    "url": "http://greatbarrierreef.io/src/kml/islands-l-q.kml"
+  },
+  {
+    "name": "islands-q-z",
+    "url": "http://greatbarrierreef.io/src/kml/islands-q-z.kml"
   }
 ]
