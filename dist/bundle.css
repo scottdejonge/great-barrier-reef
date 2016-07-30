@@ -944,6 +944,29 @@ nav a {
 		color: currentColor;
 	}
 
+.filters {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.filter {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0
+	}
+
+.filter:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.filter-label {
+			flex: 1 1 auto;
+			font-size: 1.4rem;
+		}
+
 .map {
 	position: relative;
 	width: 100vw;
@@ -980,6 +1003,37 @@ nav a {
     border-left-color: #FFF;
     animation: spin 500ms infinite linear;
 }
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	cursor: pointer;
+	background: #DDD;
+	border-radius: 10px;
+	transition: background 100ms ease-in-out
+}
+
+.switch.on {
+    background: #2A26EA;
+}
+
+.switch.on .switch-toggle {
+    left: 22px;
+}
+
+.switch-toggle {
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		bottom: 2px;
+		width: 16px;
+		height: 16px;
+		border-radius: 8px;
+		background: #FFF;
+		transition: left 100ms ease-in-out;
+	}
 
 .toggle {
 	padding: 10px;

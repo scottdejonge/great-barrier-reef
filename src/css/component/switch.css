@@ -1,0 +1,30 @@
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	cursor: pointer;
+	background: $light-grey;
+	border-radius: 10px;
+	transition: background $fast ease-in-out;
+
+	&.on {
+		background: $primary;
+
+		.switch-toggle {
+			left: 22px;
+		}
+	}
+}
+
+	.switch-toggle {
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		bottom: 2px;
+		width: 16px;
+		height: 16px;
+		border-radius: 8px;
+		background: $white;
+		transition: left $fast ease-in-out;
+	}

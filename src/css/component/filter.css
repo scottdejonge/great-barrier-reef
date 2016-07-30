@@ -1,0 +1,22 @@
+.filters {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+	.filter {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+		.filter-label {
+			flex: 1 1 auto;
+			font-size: 1.4rem;
+		}
