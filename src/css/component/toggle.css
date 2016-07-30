@@ -4,11 +4,14 @@
 	height: $toggle-size;
 	color: $dark-grey;
 	background: $white;
+	border: none;
+	border-radius: 0;
 
 	&:hover,
 	&:focus {
 		color: $dark;
 		background: $white;
+		border: none;
 	}
 }
 
