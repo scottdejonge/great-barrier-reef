@@ -19390,7 +19390,7 @@
 	
 		// Marker Icon
 		var icon = {
-			url: '/great-barrier-reef/src/marker/' + location.category + '.svg',
+			url: '/src/marker/' + location.category + '.svg',
 			scaledSize: new google.maps.Size(markerWidth, markerHeight),
 			origin: new google.maps.Point(0, 0),
 			anchor: new google.maps.Point(markerWidth / 2, markerHeight)
@@ -19671,7 +19671,7 @@
   \******************************/
 /***/ function(module, exports) {
 
-	module.exports = "[\n  {\n    \"name\": \"park\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/marine-park.kml\"\n  },\n  {\n    \"name\": \"reefs\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/reefs.kml\"\n  },\n  {\n    \"name\": \"islands-a-l\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/islands-a-l.kml\"\n  },\n  {\n    \"name\": \"islands-l-q\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/islands-l-q.kml\"\n  },\n  {\n    \"name\": \"islands-q-z\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/islands-q-z.kml\"\n  },\n  {\n    \"name\": \"estuary\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/zones-estuary.kml\"\n  },\n  {\n    \"name\": \"island\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/zones-island.kml\"\n  },\n  {\n    \"name\": \"land\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/zones-land.kml\"\n  },\n  {\n    \"name\": \"sea\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/zones-sea.kml\"\n  }\n]"
+	module.exports = "[\n  {\n    \"name\": \"park\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/marine-park.kml\"\n  },\n  {\n    \"name\": \"reefs\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/reefs.kml\"\n  },\n  {\n    \"name\": \"islands-a-l\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-a-l.kml\"\n  },\n  {\n    \"name\": \"islands-l-q\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-l-q.kml\"\n  },\n  {\n    \"name\": \"islands-q-z\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-q-z.kml\"\n  },\n  {\n    \"name\": \"estuary\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-estuary.kml\"\n  },\n  {\n    \"name\": \"island\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-island.kml\"\n  },\n  {\n    \"name\": \"land\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-land.kml\"\n  },\n  {\n    \"name\": \"sea\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-sea.kml\"\n  }\n]"
 
 /***/ },
 /* 302 */

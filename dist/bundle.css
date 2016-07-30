@@ -44,11 +44,11 @@
 
 @font-face {
     font-family: 'League Gothic';
-    src: url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.eot');
-    src: url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.woff') format('woff'),
-         url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
-         url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.svg#league_gothic_italicregular') format('svg');
+    src: url('/src/fonts/leaguegothic-regular-webfont.eot');
+    src: url('/src/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/src/fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('/src/fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('/src/fonts/leaguegothic-regular-webfont.svg#league_gothic_italicregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -787,7 +787,7 @@ nav a {
 .page-header {
 	padding: 15rem 0 5rem;
 	background-color: #2A26EA;
-	background-image: url('/great-barrier-reef/src/images/pattern.svg');
+	background-image: url('/src/images/pattern.svg');
 	background-size: 512px 512px;
 }
 
@@ -876,10 +876,36 @@ nav a {
 	}
 
 .map {
+	position: relative;
 	width: 100vw;
 	height: 100vh;
 	background: #EEE;
 }
+
+.map-canvas {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+.map-filters {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 360px;
+		background: #FFF;
+	}
+
+.map-filters-toggle {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 
 .spinner {
 	position: relative
