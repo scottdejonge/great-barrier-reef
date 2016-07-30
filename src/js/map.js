@@ -257,7 +257,7 @@ function createMarker(location, i) {
 
 	// Marker Icon
 	const icon = {
-		url: '/great-barrier-reef/src/marker/' + location.category + '.svg',
+		url: '/src/marker/' + location.category + '.svg',
 		scaledSize: new google.maps.Size(markerWidth, markerHeight),
 		origin: new google.maps.Point(0, 0),
 		anchor: new google.maps.Point((markerWidth / 2), markerHeight),

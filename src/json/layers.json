@@ -1,38 +1,38 @@
 [
   {
     "name": "park",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/marine-park.kml"
+    "url": "http://greatbarrierreef.io/src/kml/marine-park.kml"
   },
   {
     "name": "reefs",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/reefs.kml"
+    "url": "http://greatbarrierreef.io/src/kml/reefs.kml"
   },
   {
     "name": "islands-a-l",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/islands-a-l.kml"
+    "url": "http://greatbarrierreef.io/src/kml/islands-a-l.kml"
   },
   {
     "name": "islands-l-q",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/islands-l-q.kml"
+    "url": "http://greatbarrierreef.io/src/kml/islands-l-q.kml"
   },
   {
     "name": "islands-q-z",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/islands-q-z.kml"
+    "url": "http://greatbarrierreef.io/src/kml/islands-q-z.kml"
   },
   {
     "name": "estuary",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/zones-estuary.kml"
+    "url": "http://greatbarrierreef.io/src/kml/zones-estuary.kml"
   },
   {
     "name": "island",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/zones-island.kml"
+    "url": "http://greatbarrierreef.io/src/kml/zones-island.kml"
   },
   {
     "name": "land",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/zones-land.kml"
+    "url": "http://greatbarrierreef.io/src/kml/zones-land.kml"
   },
   {
     "name": "sea",
-    "url": "http://scottdejonge.com/great-barrier-reef/src/kml/zones-sea.kml"
+    "url": "http://greatbarrierreef.io/src/kml/zones-sea.kml"
   }
 ]
