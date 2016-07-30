@@ -2,63 +2,72 @@
   {
     "title": "Heron Island Reef",
     "category": "dive",
-    "content": "",
+    "content": "Heron Island is a natural coral cay found 89kms off the coast of Queensland. It’s an island resort on the Great Barrier Reef which means that if you are lucky enough to visit the island, the reef is literally on your doorstep. We spent a lot of time on one particular site called the Heron Bommie, the Bommie is a fantastic dive site made favoured by the one and only Jacques Cousteau.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/heron-island",
     "lat": -23.442896,
     "lng": 151.906584
   },
   {
-    "title": "Wilson Island Reef",
+    "title": "Wilson Island",
     "category": "dive",
-    "content": "",
+    "content": "Wilson Island is one of eight vegetated coral cays in the Capricornia Cays National Park and is one of only a handful of places that people can stay on the Great Barrier Reef itself. Wilson Island is just 15 kms north of Heron Island and is accessed by boat via Heron. Wilson is an important rookery for both Green Turtles and the local bird community - the island actually closes down to visitors in February when nesting season peaks.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/wilson-island",
     "lat": -23.303391,
     "lng": 151.914955
   },
   {
-    "title": "Lizard Island Reef",
+    "title": "Lizard Island",
     "category": "dive",
-    "content": "",
+    "content": "Lizard Island is a special place which is recognised as a National Park, it's home to the isolated Lizard Island Research Station which is operated by the Australian Museum.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/lizard-island",
     "lat": -14.685821,
     "lng": 145.442162
   },
   {
     "title": "Mantis Reef",
     "category": "dive",
-    "content": "",
+    "content": "Mantis Reef is one of the jewels of the far north. People visit this area expecting to see mega-fauna, big marine creatures. If you want to see Silver-tip reef sharks then Mantis Reef is the place to visit!",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/mantis-reef",
     "lat": -12.209887,
     "lng": 143.947125
   },
   {
     "title": "Opal Reef",
     "category": "dive",
-    "content": "",
+    "content": "It may sound corny but it's true what they say, Opal Reef is a true gem, especially when it comes to corals. We found both the hard and soft corals on this reef breathtaking. The area is also home to large marine life, most notably a very friendly Maori Wrasse.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/opal-reef",
     "lat": -16.244786,
     "lng": 145.867467
   },
   {
     "title": "Saunders Reef",
     "category": "dive",
-    "content": "",
+    "content": "Situated at the far north of the Great Barrier Reef chain, between the Great Detatched Reef and the protected Raine Island, lies a rarely visited reef called Saunders Reef.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/saunders-reef",
     "lat": -11.50642,
     "lng": 144.094259
   },
   {
     "title": "Wishbone Reef",
     "category": "dive",
-    "content": "",
+    "content": "Like many of the reefs in the far north of Australia, Wishbone Reef is largely untouched by tourism due to its distance from port. It's a beautiful reef home to all kinds of marine life, stunning corals and every colour of fish in the sea.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/wishbone-reef",
     "lat": -12.100353,
     "lng": 143.964604
   },
   {
     "title": "Tijou Reef",
     "category": "dive",
-    "content": "",
+    "content": "This reef is situated in the middle of the Far Northern Section of the Great Barrier Reef, 110km southeast of Lockhart River. The reef has many excellent dive sites. Healthy coral gardens on the protected side, wall diving on the eastern side and plenty of sharks around the northern tip of the reef. Silvertip Sharks, Whitetip Reef Sharks and Grey Reef Sharks are known to frequent this area and give divers a thrill.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/tijou-reef",
     "lat": -13.069386,
     "lng": 143.945836
   },
   {
     "title": "Ribbon Reef",
     "category": "dive",
-    "content": "",
+    "content": "The Ribbon reefs are a chain of reefs stretching over 100km, one of the longest chains along the outer Great Barrier Reef. These reefs start near Cooktown and continue all the way north as far as Lizard Island, bordering the Coral Sea.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/ribbon-reef-no-10",
     "lat": -14.920139,
     "lng": 145.700062
   },
@@ -66,7 +75,8 @@
     "title": "Great Detached Reef",
     "streetViewId": "I2MBeyGDMAEAAAQfCaZWGQ",
     "category": "dive",
-    "content": "",
+    "content": "The Great Detached Reef is a large complex of several reefs on an older fossil surface. The reef features the breathtaking walls and huge pelagic fish that the Far North Section of the Great Barrier Reef is renowned for. Of particular note on this reef are dive spots called Manta Wall, a place we'll be looking for graceful Mantas and Camel Back, 2 pinnacles that provide shelter for a huge variety of fish. Being so remote, this area is also home to plenty of big sharks which keep things interesting for divers.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/great-detached-reef",
     "lat": -11.7194777293684,
     "lng": 144.039688110352
   },
@@ -74,15 +84,17 @@
     "title": "Yongala Shipwreck",
     "streetViewId": "GbPknZsddS4AAAQfCaRxVg",
     "category": "dive",
-    "content": "",
+    "content": "The Yongala Shipwreck is a 110m former steel passenger and freight steamer which sank in 1911 during a tropical cyclone with 124 passengers onboard. The wreck lies at a depth of 33 metres and is constantly included on 'top 10 lists' for best dives in the world. ",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/yongala-wreck",
     "lat": -19.294378,
     "lng": 147.618642
   },
   {
-    "title": "Lady Elliot Island Reef",
+    "title": "Lady Elliot Island",
     "streetViewId": "0n35W7TznTa2w83k3q1O-A",
     "category": "dive",
-    "content": "",
+    "content": "Lady Elliot Island is one of only three island resorts on the Great Barrier Reef, Australia. The island is located within the Great Barrier Reef Marine Park in the highest possible classification of Marine National Park Zone by GBRMPA. This means that the island's waters are teeming with live corals and marine life. ",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/lady-elliot-island",
     "lat": -24.117052,
     "lng": 152.709842
   },
@@ -90,7 +102,8 @@
     "title": "North Broken Passage",
     "streetViewId": "MGB3IbSxGxkAAAQfCa_m3w",
     "category": "dive",
-    "content": "",
+    "content": "The North Broken Passage is a channel through another unnamed reef in the Cape Melville area. It's no secret that the coral reefs that we have visited are full of life, but many of the fish that live on the reef are small. It's channels, like the North Broken Passage, that are home to the larger pelagic and predatorial fish.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/north-broken-passage",
     "lat": -13.921229,
     "lng": 144.641367
   },
@@ -98,7 +111,8 @@
     "title": "Tydeman Reef",
     "streetViewId": "dor33dyWZuEAAAQfCarXFw",
     "category": "dive",
-    "content": "",
+    "content": "Tydeman Reef is another reef that is found inside the Great Barrier Reef and not too far from the Australian land-mass at Cape Melville. The location of Tydeman means that the reef is very protected from the weather systems that can batter other reefs in less sheltered locations. This makes for some great structures on Tydeman Reef, certainly worth a visit.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/tydeman-reef",
     "lat": -13.97303,
     "lng": 144.501376
   },
@@ -106,7 +120,8 @@
     "title": "Knife Reef",
     "streetViewId": "tuQ-hEzC6zUAAAQfCa96Bg",
     "category": "dive",
-    "content": "",
+    "content": "The reef here is about 2km in length and is covered in some impressive coral growth, however there is also a fair amount of coral rubble in the area - it's unclear if this is due to storm activity or other factors.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/knife-reef",
     "lat": -18.585523,
     "lng": 147.564247
   },
@@ -114,7 +129,8 @@
     "title": "The Cod Hole",
     "streetViewId": "Q7WM6yCJUkgAAAQfCbBQ-w",
     "category": "dive",
-    "content": "",
+    "content": "Interestingly the Cod Hole was one of the first sites protected on the Great Barrier Reef thanks primarily to the efforts of Ron and Valerie Taylor, who in the early 1980's witnessed the huge cod population decimated by overfishing. This corner of reef attracts a huge variety of marine life aside from Potato Cods, including huge Coral Trout, all varieties of shark, Minke Whales, dolphins and thousands of coral reef fish.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/the-cod-hole",
     "lat": -14.666769,
     "lng": 145.660171
   },
@@ -122,7 +138,8 @@
     "title": "Norman Reef",
     "streetViewId": "U5OACYt--5UAAAQfCbAC4A",
     "category": "dive",
-    "content": "",
+    "content": "Norman Reef is one of a few highly visited outer reefs located only a few miles from the continental shelf. One of the larger dive operators in the area has a pontoon and a submersible stationed permanently on the reef which can be visited by hundreds of people each day on either day boats or liveaboards.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/norman-reef",
     "lat": -15.336161,
     "lng": 145.784792
   },
@@ -130,15 +147,8 @@
     "title": "St. Crispins Reef",
     "streetViewId": "xXFiD1jApxEAAAQfCaZacg",
     "category": "dive",
-    "content": "",
-    "lat": -16.074063,
-    "lng": 145.849884
-  },
-  {
-    "title": "St. Crispins Reef",
-    "streetViewId": "xXFiD1jApxEAAAQfCaZacg",
-    "category": "dive",
-    "content": "",
+    "content": "Saint Crispin is the French Christian patron saint of cobblers, tanners and leather workers. Shakespeare then immortalised St. Crispin in one of his famed plays, Henry V. Finally years later someone (we aren't sure who) named this beautiful reef after St. Crispin. ",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/st-crispins-reef",
     "lat": -16.074063,
     "lng": 145.849884
   },
@@ -146,7 +156,8 @@
     "title": "Agincourt Reef",
     "streetViewId": "R8sNWiq8ivUAAAQfCafEzw",
     "category": "dive",
-    "content": "",
+    "content": "This must be the 'French region' of the Coral Sea; north of St Crispins reef is Agincourt reef, a particularly large cluster of reefs in the Coral Sea. The Battle of Agincourt was a major victory for the English over the French, the victory was actually declared on St. Crispins day in 1415.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/agincourt",
     "lat": -16.032,
     "lng": 145.858452
   },
@@ -154,7 +165,8 @@
     "title": "Myrmidon Reef",
     "streetViewId": "hvJbgfc-HtoAAAQfCaR8Mw",
     "category": "dive",
-    "content": "",
+    "content": "In Greek Mythology the Myrmidons were Achilles' fierce and loyal warriors. Perhaps it is the enduring and ancient nature of this reef that led to its name.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/myrmidon-reef",
     "lat": -18.246795,
     "lng": 147.386806
   },
@@ -162,7 +174,8 @@
     "title": "Osprey Reef",
     "streetViewId": "UC39RZSwIhYAAAQfCbAHrw",
     "category": "dive",
-    "content": "",
+    "content": "Technically, Osprey is not part of the Great Barrier Reef; it's found in the Coral Sea about 100km outside of the reef, an overnight trip for most dive boats. Osprey Reef is a submerged atoll, it's part of the Northwestern Group of the Coral Sea Islands.",
+    "link": "http://catlinseaviewsurvey.com/surveys/great-barrier-reef-and-coral-sea/osprey-reef",
     "lat": -13.805452,
     "lng": 146.572458
   }

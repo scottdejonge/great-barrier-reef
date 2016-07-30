@@ -298,7 +298,8 @@ function createMarker(location, i) {
 		category: location.category,
 		streetViewId: location.streetViewId,
 		zoom: location.zoom,
-		content: location.content
+		content: location.content,
+		link: location.link
 	});
 
 	// Marker click event Update Info
@@ -357,7 +358,9 @@ function updateContent(marker) {
 		content += '<h2>' + marker.title + '</h2>';
 	}
 
-	if (marker.content) {
+	if (marker.link && marker.content) {
+		content += '<p>' + marker.content + ' <a href="' + marker.link + '" target="_blank">(Read More)</a></p>';
+	} else if (marker.content) {
 		content += '<p>' + marker.content + '</p>';
 	}
 
