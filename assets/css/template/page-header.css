@@ -1,6 +1,8 @@
 .page-header {
 	padding: 15rem 0 5rem;
-	background: $primary url('../images/pattern.svg');
+	background-color: $primary;
+	background-image: url('/great-barrier-reef/assets/images/pattern.svg');
+	background-size: 512px 512px;
 }
 
 	.page-header-title,
