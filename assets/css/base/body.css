@@ -1,0 +1,6 @@
+body {
+	min-height: 100%;
+	font-family: $sans-serif;
+	color: $dark-grey;
+	background: $white;
+}

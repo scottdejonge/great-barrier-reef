@@ -1,0 +1,15 @@
+p {
+	margin: 1em 0;
+	font-weight: 300;
+	font-size: 1.6rem;
+	color: $dark-grey;
+	line-height: 1.65;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

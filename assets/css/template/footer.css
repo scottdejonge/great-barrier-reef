@@ -1,0 +1,25 @@
+.footer {
+	text-align: center;
+	
+	a {
+		display: inline-block;
+		font-size: 1.4rem;
+		color: $grey;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: $dark-grey;
+			text-decoration: underline;
+		}
+	}
+}
+
+	.footer-copyright {
+		font-size: 1.4rem;
+		color: $dark-grey;
+	}
+
+	.footer-navigation {
+		font-weight: 300;
+	}
