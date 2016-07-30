@@ -1,63 +1,63 @@
 [
   {
     "title": "Heron Island Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -23.442896,
     "lng": 151.906584
   },
   {
     "title": "Wilson Island Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -23.303391,
     "lng": 151.914955
   },
   {
     "title": "Lizard Island Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -14.685821,
     "lng": 145.442162
   },
   {
     "title": "Mantis Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -12.209887,
     "lng": 143.947125
   },
   {
     "title": "Opal Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -16.244786,
     "lng": 145.867467
   },
   {
     "title": "Saunders Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -11.50642,
     "lng": 144.094259
   },
   {
     "title": "Wishbone Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -12.100353,
     "lng": 143.964604
   },
   {
     "title": "Tijou Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -13.069386,
     "lng": 143.945836
   },
   {
     "title": "Ribbon Reef",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -14.920139,
     "lng": 145.700062
@@ -65,7 +65,7 @@
   {
     "title": "Great Detached Reef",
     "streetViewId": "I2MBeyGDMAEAAAQfCaZWGQ",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -11.7194777293684,
     "lng": 144.039688110352
@@ -73,7 +73,7 @@
   {
     "title": "Yongala Shipwreck",
     "streetViewId": "GbPknZsddS4AAAQfCaRxVg",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -19.294378,
     "lng": 147.618642
@@ -81,7 +81,7 @@
   {
     "title": "Lady Elliot Island Reef",
     "streetViewId": "0n35W7TznTa2w83k3q1O-A",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -24.117052,
     "lng": 152.709842
@@ -89,7 +89,7 @@
   {
     "title": "North Broken Passage",
     "streetViewId": "MGB3IbSxGxkAAAQfCa_m3w",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -13.921229,
     "lng": 144.641367
@@ -97,7 +97,7 @@
   {
     "title": "Tydeman Reef",
     "streetViewId": "dor33dyWZuEAAAQfCarXFw",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -13.97303,
     "lng": 144.501376
@@ -105,7 +105,7 @@
   {
     "title": "Knife Reef",
     "streetViewId": "tuQ-hEzC6zUAAAQfCa96Bg",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -18.585523,
     "lng": 147.564247
@@ -113,7 +113,7 @@
   {
     "title": "The Cod Hole",
     "streetViewId": "Q7WM6yCJUkgAAAQfCbBQ-w",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -14.666769,
     "lng": 145.660171
@@ -121,7 +121,7 @@
   {
     "title": "Norman Reef",
     "streetViewId": "U5OACYt--5UAAAQfCbAC4A",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -15.336161,
     "lng": 145.784792
@@ -129,7 +129,7 @@
   {
     "title": "St. Crispins Reef",
     "streetViewId": "xXFiD1jApxEAAAQfCaZacg",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -16.074063,
     "lng": 145.849884
@@ -137,7 +137,7 @@
   {
     "title": "St. Crispins Reef",
     "streetViewId": "xXFiD1jApxEAAAQfCaZacg",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -16.074063,
     "lng": 145.849884
@@ -145,7 +145,7 @@
   {
     "title": "Agincourt Reef",
     "streetViewId": "R8sNWiq8ivUAAAQfCafEzw",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -16.032,
     "lng": 145.858452
@@ -153,7 +153,7 @@
   {
     "title": "Myrmidon Reef",
     "streetViewId": "hvJbgfc-HtoAAAQfCaR8Mw",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -18.246795,
     "lng": 147.386806
@@ -161,7 +161,7 @@
   {
     "title": "Osprey Reef",
     "streetViewId": "UC39RZSwIhYAAAQfCbAHrw",
-    "category": "panorama",
+    "category": "dive",
     "content": "",
     "lat": -13.805452,
     "lng": 146.572458

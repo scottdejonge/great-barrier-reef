@@ -45,7 +45,7 @@ let StreetViewService;
 const streetViewRadius = 500;
 
 // Marker Sizes
-const markerWidth = 24;
+const markerWidth = 28;
 const markerHeight = markerWidth;
 
 // Filter
@@ -57,8 +57,8 @@ const styles = JSON.parse(require('../json/styles.json'));
 // Map Layers
 const layers = JSON.parse(require('../json/layers.json'));
 
-// Map Locations
-const locations = JSON.parse(require('../json/locations.json'));
+// Map Dives
+const dives = JSON.parse(require('../json/dives.json'));
 
 
 /**
@@ -131,11 +131,11 @@ function createMap($map) {
 	bounds = new google.maps.LatLngBounds();
 
 	// init Filters
-	initFilters();
+	// initFilters();
 	
-	// Create Markers for Locations
-	if (locations) {
-		createMarkers(locations);
+	// Create Markers for Dives
+	if (dives) {
+		createMarkers(dives);
 	}
 
 	// Island Button Click
@@ -257,7 +257,7 @@ function createMarker(location, i) {
 
 	// Marker Icon
 	const icon = {
-		url: '/assets/map/marker/' + location.category + '.png',
+		url: '/great-barrier-reef/src/marker/' + location.category + '.svg',
 		scaledSize: new google.maps.Size(markerWidth, markerHeight),
 		origin: new google.maps.Point(0, 0),
 		anchor: new google.maps.Point((markerWidth / 2), markerHeight),
@@ -266,7 +266,7 @@ function createMarker(location, i) {
 	// Create Marker Object
 	const marker = new google.maps.Marker({
 		map: map,
-		// icon: icon,
+		icon: icon,
 		position: latLng,
 		zIndex: zIndex,
 		title: location.title,
@@ -281,11 +281,11 @@ function createMarker(location, i) {
 		markerClick(this);
 	});
 
-	if ($.inArray(location.category, categories) != -1) {
-		marker.setVisible(true);
-	} else {
-		marker.setVisible(false);
-	}
+	// if ($.inArray(location.category, categories) != -1) {
+	// 	marker.setVisible(true);
+	// } else {
+	// 	marker.setVisible(false);
+	// }
 
 	//Add Marker to markers
 	markers.push(marker);
@@ -314,7 +314,7 @@ function markerClick(marker) {
 	if (marker.category == 'island') {
 		$buttonIsland.removeClass('hide');
 		$buttonIsland.data('marker', marker);
-	} else if (marker.category == 'panorama') {
+	} else if (marker.category == 'dive') {
 		$buttonPanorama.removeClass('hide');
 		$buttonPanorama.data('marker', marker);
 	}
@@ -355,7 +355,7 @@ function updateImage(marker) {
 	} else {
 		if (marker.category == 'island') {
 			src = 'https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=' + lat + ',' + lng + '&zoom=' + zoom + '&size=' + IMAGE_SIZE + '&key=' + API_KEY;
-		} else if (marker.category == 'panorama') {
+		} else if (marker.category == 'dive') {
 			src = 'https://maps.googleapis.com/maps/api/streetview?size=' + IMAGE_SIZE + '&location=' + lat + ',' + lng + '&key=' + API_KEY;
 		}
 	}

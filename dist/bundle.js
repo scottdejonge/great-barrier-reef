@@ -19148,14 +19148,11 @@
 	// API Key
 	var API_KEY = 'AIzaSyCHSXxaBYz6cEYOiU4XfaaurReMcCa0oT4';
 	
-	// Site URL
+	// Image Size
 	/**
 	 * Requires
 	 */
 	
-	var SITE_URL = 'http://scottdejonge.com/great-barrier-reef/';
-	
-	// Image Size
 	var IMAGE_SIZE = '480x320';
 	
 	// DOM Elements
@@ -19182,33 +19179,26 @@
 	var categories = [];
 	var backgroundColor = '#27262D';
 	
-	// KML Overlay
-	var layers = [];
-	var parkLayerUrl = SITE_URL + 'src/kml/marine-park.kml';
-	var reefLayerUrl = SITE_URL + 'src/kml/reefs.kml';
-	var islandsLayerUrl = SITE_URL + 'src/kml/islands.kml';
-	var zonesEstuaryLayerUrl = SITE_URL + 'src/kml/zones-estuary.kml';
-	var zonesIslandLayerUrl = SITE_URL + 'src/kml/zones-island.kml';
-	var zonesLandLayerUrl = SITE_URL + 'src/kml/zones-land.kml';
-	var zonesSeaLayerUrl = SITE_URL + 'src/kml/zones-sea.kml';
-	
 	// Street View
 	var panorama = void 0;
 	var StreetViewService = void 0;
 	var streetViewRadius = 500;
 	
 	// Marker Sizes
-	var markerWidth = 24;
+	var markerWidth = 28;
 	var markerHeight = markerWidth;
 	
 	// Filter
 	var $filter = (0, _jquery2.default)('[data-filter]');
 	
 	// Map Styles
-	var mapStyles = JSON.parse(__webpack_require__(/*! ../json/styles.json */ 300));
+	var styles = JSON.parse(__webpack_require__(/*! ../json/styles.json */ 300));
 	
-	// Map Locations
-	var locations = JSON.parse(__webpack_require__(/*! ../json/locations.json */ 301));
+	// Map Layers
+	var layers = JSON.parse(__webpack_require__(/*! ../json/layers.json */ 306));
+	
+	// Map Dives
+	var dives = JSON.parse(__webpack_require__(/*! ../json/dives.json */ 307));
 	
 	/**
 	 * Initialisation
@@ -19257,7 +19247,7 @@
 			streetViewControl: false,
 			overviewMapControl: false,
 			center: center,
-			styles: mapStyles,
+			styles: styles,
 			mapTypeId: google.maps.MapTypeId.HYBRID,
 			backgroundColor: backgroundColor
 		};
@@ -19278,11 +19268,11 @@
 		bounds = new google.maps.LatLngBounds();
 	
 		// init Filters
-		initFilters();
+		// initFilters();
 	
-		// Create Markers for Locations
-		if (locations) {
-			createMarkers(locations);
+		// Create Markers for Dives
+		if (dives) {
+			createMarkers(dives);
 		}
 	
 		// Island Button Click
@@ -19365,13 +19355,9 @@
 			map: map
 		};
 	
-		layers[0] = new google.maps.KmlLayer(parkLayerUrl, kmlOptions);
-		layers[1] = new google.maps.KmlLayer(reefLayerUrl, kmlOptions);
-		layers[2] = new google.maps.KmlLayer(islandsLayerUrl, kmlOptions);
-		layers[3] = new google.maps.KmlLayer(zonesEstuaryLayerUrl, kmlOptions);
-		layers[4] = new google.maps.KmlLayer(zonesIslandLayerUrl, kmlOptions);
-		layers[5] = new google.maps.KmlLayer(zonesLandLayerUrl, kmlOptions);
-		layers[6] = new google.maps.KmlLayer(zonesSeaLayerUrl, kmlOptions);
+		_jquery2.default.each(layers, function (i, layer) {
+			var mapLayer = new google.maps.KmlLayer(layer.url, kmlOptions);
+		});
 	}
 	
 	/**
@@ -19404,7 +19390,7 @@
 	
 		// Marker Icon
 		var icon = {
-			url: '/assets/map/marker/' + location.category + '.png',
+			url: '/great-barrier-reef/src/marker/' + location.category + '.svg',
 			scaledSize: new google.maps.Size(markerWidth, markerHeight),
 			origin: new google.maps.Point(0, 0),
 			anchor: new google.maps.Point(markerWidth / 2, markerHeight)
@@ -19413,7 +19399,7 @@
 		// Create Marker Object
 		var marker = new google.maps.Marker({
 			map: map,
-			// icon: icon,
+			icon: icon,
 			position: latLng,
 			zIndex: zIndex,
 			title: location.title,
@@ -19428,11 +19414,11 @@
 			markerClick(this);
 		});
 	
-		if (_jquery2.default.inArray(location.category, categories) != -1) {
-			marker.setVisible(true);
-		} else {
-			marker.setVisible(false);
-		}
+		// if ($.inArray(location.category, categories) != -1) {
+		// 	marker.setVisible(true);
+		// } else {
+		// 	marker.setVisible(false);
+		// }
 	
 		//Add Marker to markers
 		markers.push(marker);
@@ -19460,7 +19446,7 @@
 		if (marker.category == 'island') {
 			$buttonIsland.removeClass('hide');
 			$buttonIsland.data('marker', marker);
-		} else if (marker.category == 'panorama') {
+		} else if (marker.category == 'dive') {
 			$buttonPanorama.removeClass('hide');
 			$buttonPanorama.data('marker', marker);
 		}
@@ -19499,7 +19485,7 @@
 		} else {
 			if (marker.category == 'island') {
 				src = 'https://maps.googleapis.com/maps/api/staticmap?maptype=satellite&center=' + lat + ',' + lng + '&zoom=' + zoom + '&size=' + IMAGE_SIZE + '&key=' + API_KEY;
-			} else if (marker.category == 'panorama') {
+			} else if (marker.category == 'dive') {
 				src = 'https://maps.googleapis.com/maps/api/streetview?size=' + IMAGE_SIZE + '&location=' + lat + ',' + lng + '&key=' + API_KEY;
 			}
 		}
@@ -19679,15 +19665,7 @@
 	module.exports = "[\n  {\n    \"featureType\": \"all\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"visibility\": \"on\"\n      },\n      {\n        \"color\": \"#FFFFFF\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"all\",\n    \"elementType\": \"labels.text.stroke\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"all\",\n    \"elementType\": \"labels.icon\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road\",\n    \"elementType\": \"all\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"transit\",\n    \"elementType\": \"all\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  }\n]"
 
 /***/ },
-/* 301 */
-/*!*********************************!*\
-  !*** ./src/json/locations.json ***!
-  \*********************************/
-/***/ function(module, exports) {
-
-	module.exports = "[\n  {\n    \"title\": \"Heron Island Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -23.442896,\n    \"lng\": 151.906584\n  },\n  {\n    \"title\": \"Wilson Island Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -23.303391,\n    \"lng\": 151.914955\n  },\n  {\n    \"title\": \"Lizard Island Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -14.685821,\n    \"lng\": 145.442162\n  },\n  {\n    \"title\": \"Mantis Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -12.209887,\n    \"lng\": 143.947125\n  },\n  {\n    \"title\": \"Opal Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -16.244786,\n    \"lng\": 145.867467\n  },\n  {\n    \"title\": \"Saunders Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -11.50642,\n    \"lng\": 144.094259\n  },\n  {\n    \"title\": \"Wishbone Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -12.100353,\n    \"lng\": 143.964604\n  },\n  {\n    \"title\": \"Tijou Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -13.069386,\n    \"lng\": 143.945836\n  },\n  {\n    \"title\": \"Ribbon Reef\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -14.920139,\n    \"lng\": 145.700062\n  },\n  {\n    \"title\": \"Great Detached Reef\",\n    \"streetViewId\": \"I2MBeyGDMAEAAAQfCaZWGQ\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -11.7194777293684,\n    \"lng\": 144.039688110352\n  },\n  {\n    \"title\": \"Yongala Shipwreck\",\n    \"streetViewId\": \"GbPknZsddS4AAAQfCaRxVg\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -19.294378,\n    \"lng\": 147.618642\n  },\n  {\n    \"title\": \"Lady Elliot Island Reef\",\n    \"streetViewId\": \"0n35W7TznTa2w83k3q1O-A\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -24.117052,\n    \"lng\": 152.709842\n  },\n  {\n    \"title\": \"North Broken Passage\",\n    \"streetViewId\": \"MGB3IbSxGxkAAAQfCa_m3w\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -13.921229,\n    \"lng\": 144.641367\n  },\n  {\n    \"title\": \"Tydeman Reef\",\n    \"streetViewId\": \"dor33dyWZuEAAAQfCarXFw\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -13.97303,\n    \"lng\": 144.501376\n  },\n  {\n    \"title\": \"Knife Reef\",\n    \"streetViewId\": \"tuQ-hEzC6zUAAAQfCa96Bg\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -18.585523,\n    \"lng\": 147.564247\n  },\n  {\n    \"title\": \"The Cod Hole\",\n    \"streetViewId\": \"Q7WM6yCJUkgAAAQfCbBQ-w\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -14.666769,\n    \"lng\": 145.660171\n  },\n  {\n    \"title\": \"Norman Reef\",\n    \"streetViewId\": \"U5OACYt--5UAAAQfCbAC4A\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -15.336161,\n    \"lng\": 145.784792\n  },\n  {\n    \"title\": \"St. Crispins Reef\",\n    \"streetViewId\": \"xXFiD1jApxEAAAQfCaZacg\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -16.074063,\n    \"lng\": 145.849884\n  },\n  {\n    \"title\": \"St. Crispins Reef\",\n    \"streetViewId\": \"xXFiD1jApxEAAAQfCaZacg\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -16.074063,\n    \"lng\": 145.849884\n  },\n  {\n    \"title\": \"Agincourt Reef\",\n    \"streetViewId\": \"R8sNWiq8ivUAAAQfCafEzw\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -16.032,\n    \"lng\": 145.858452\n  },\n  {\n    \"title\": \"Myrmidon Reef\",\n    \"streetViewId\": \"hvJbgfc-HtoAAAQfCaR8Mw\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -18.246795,\n    \"lng\": 147.386806\n  },\n  {\n    \"title\": \"Osprey Reef\",\n    \"streetViewId\": \"UC39RZSwIhYAAAQfCbAHrw\",\n    \"category\": \"panorama\",\n    \"content\": \"\",\n    \"lat\": -13.805452,\n    \"lng\": 146.572458\n  },\n\n\n\n  {\n    \"title\": \"Heron Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 17,\n    \"lat\": -23.441917581354087,\n    \"lng\": 151.91153168678284\n  },\n  {\n    \"title\": \"Lady Elliot Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 16,\n    \"lat\": -24.113365096938026,\n    \"lng\": 152.71515369415283\n  },\n  {\n    \"title\": \"Hayman Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 16,\n    \"lat\": -20.050765,\n    \"lng\": 148.887969\n  },\n  {\n    \"title\": \"Fitzroy Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 16,\n    \"lat\": -16.932286,\n    \"lng\": 145.994047\n  },\n  {\n    \"title\": \"Lady Musgrave Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 15,\n    \"lat\": -23.906691982677046,\n    \"lng\": 152.39288091659546\n  },\n  {\n    \"title\": \"Raine Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 17,\n    \"lat\": -11.590280,\n    \"lng\": 144.035065\n  },\n  {\n    \"title\": \"Wilson Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 18,\n    \"lat\": -23.304645356856884,\n    \"lng\": 151.91652595996857\n  },\n  {\n    \"title\": \"Lizard Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 15,\n    \"lat\": -14.672943589696708,\n    \"lng\": 145.45748233795166\n  },\n  {\n    \"title\": \"Magnetic Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 14,\n    \"lat\": -19.139384,\n    \"lng\": 146.834644\n  },\n  {\n    \"title\": \"Palm Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 14,\n    \"lat\": -18.73601175364283,\n    \"lng\": 146.6085923681385\n  },\n  {\n    \"title\": \"Orpheus Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 15,\n    \"lat\": -18.614098,\n    \"lng\": 146.496291\n  },\n  {\n    \"title\": \"Green Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 15,\n    \"lat\": -16.759719,\n    \"lng\": 145.974477\n  },\n  {\n    \"title\": \"Great Kepple Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 15,\n    \"lat\": -23.176542,\n    \"lng\": 150.963868\n  },\n  {\n    \"title\": \"One Tree Island\",\n    \"category\": \"island\",\n    \"content\": \"\",\n    \"zoom\": 15,\n    \"lat\": -23.507590,\n    \"lng\": 152.091665\n  }\n]"
-
-/***/ },
+/* 301 */,
 /* 302 */
 /*!**************************!*\
   !*** ./src/css/main.css ***!
@@ -19695,6 +19673,27 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */
+/*!******************************!*\
+  !*** ./src/json/layers.json ***!
+  \******************************/
+/***/ function(module, exports) {
+
+	module.exports = "[\n  {\n    \"name\": \"park\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/marine-park.kml\"\n  },\n  {\n    \"name\": \"reefs\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/reefs.kml\"\n  },\n  {\n    \"name\": \"islands-a-l\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/islands-a-l.kml\"\n  },\n  {\n    \"name\": \"islands-l-q\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/islands-l-q.kml\"\n  },\n  {\n    \"name\": \"islands-q-z\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/islands-q-z.kml\"\n  },\n  {\n    \"name\": \"estuary\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/zones-estuary.kml\"\n  },\n  {\n    \"name\": \"island\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/zones-island.kml\"\n  },\n  {\n    \"name\": \"land\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/zones-land.kml\"\n  },\n  {\n    \"name\": \"sea\",\n    \"url\": \"http://scottdejonge.com/great-barrier-reef/src/kml/zones-sea.kml\"\n  }\n]"
+
+/***/ },
+/* 307 */
+/*!*****************************!*\
+  !*** ./src/json/dives.json ***!
+  \*****************************/
+/***/ function(module, exports) {
+
+	module.exports = "[\n  {\n    \"title\": \"Heron Island Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -23.442896,\n    \"lng\": 151.906584\n  },\n  {\n    \"title\": \"Wilson Island Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -23.303391,\n    \"lng\": 151.914955\n  },\n  {\n    \"title\": \"Lizard Island Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -14.685821,\n    \"lng\": 145.442162\n  },\n  {\n    \"title\": \"Mantis Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -12.209887,\n    \"lng\": 143.947125\n  },\n  {\n    \"title\": \"Opal Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -16.244786,\n    \"lng\": 145.867467\n  },\n  {\n    \"title\": \"Saunders Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -11.50642,\n    \"lng\": 144.094259\n  },\n  {\n    \"title\": \"Wishbone Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -12.100353,\n    \"lng\": 143.964604\n  },\n  {\n    \"title\": \"Tijou Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -13.069386,\n    \"lng\": 143.945836\n  },\n  {\n    \"title\": \"Ribbon Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -14.920139,\n    \"lng\": 145.700062\n  },\n  {\n    \"title\": \"Great Detached Reef\",\n    \"streetViewId\": \"I2MBeyGDMAEAAAQfCaZWGQ\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -11.7194777293684,\n    \"lng\": 144.039688110352\n  },\n  {\n    \"title\": \"Yongala Shipwreck\",\n    \"streetViewId\": \"GbPknZsddS4AAAQfCaRxVg\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -19.294378,\n    \"lng\": 147.618642\n  },\n  {\n    \"title\": \"Lady Elliot Island Reef\",\n    \"streetViewId\": \"0n35W7TznTa2w83k3q1O-A\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -24.117052,\n    \"lng\": 152.709842\n  },\n  {\n    \"title\": \"North Broken Passage\",\n    \"streetViewId\": \"MGB3IbSxGxkAAAQfCa_m3w\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -13.921229,\n    \"lng\": 144.641367\n  },\n  {\n    \"title\": \"Tydeman Reef\",\n    \"streetViewId\": \"dor33dyWZuEAAAQfCarXFw\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -13.97303,\n    \"lng\": 144.501376\n  },\n  {\n    \"title\": \"Knife Reef\",\n    \"streetViewId\": \"tuQ-hEzC6zUAAAQfCa96Bg\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -18.585523,\n    \"lng\": 147.564247\n  },\n  {\n    \"title\": \"The Cod Hole\",\n    \"streetViewId\": \"Q7WM6yCJUkgAAAQfCbBQ-w\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -14.666769,\n    \"lng\": 145.660171\n  },\n  {\n    \"title\": \"Norman Reef\",\n    \"streetViewId\": \"U5OACYt--5UAAAQfCbAC4A\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -15.336161,\n    \"lng\": 145.784792\n  },\n  {\n    \"title\": \"St. Crispins Reef\",\n    \"streetViewId\": \"xXFiD1jApxEAAAQfCaZacg\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -16.074063,\n    \"lng\": 145.849884\n  },\n  {\n    \"title\": \"St. Crispins Reef\",\n    \"streetViewId\": \"xXFiD1jApxEAAAQfCaZacg\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -16.074063,\n    \"lng\": 145.849884\n  },\n  {\n    \"title\": \"Agincourt Reef\",\n    \"streetViewId\": \"R8sNWiq8ivUAAAQfCafEzw\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -16.032,\n    \"lng\": 145.858452\n  },\n  {\n    \"title\": \"Myrmidon Reef\",\n    \"streetViewId\": \"hvJbgfc-HtoAAAQfCaR8Mw\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -18.246795,\n    \"lng\": 147.386806\n  },\n  {\n    \"title\": \"Osprey Reef\",\n    \"streetViewId\": \"UC39RZSwIhYAAAQfCbAHrw\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -13.805452,\n    \"lng\": 146.572458\n  }\n]"
 
 /***/ }
 /******/ ]);
