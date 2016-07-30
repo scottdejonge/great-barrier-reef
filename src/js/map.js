@@ -13,7 +13,7 @@ import $ from 'jquery'
 const API_KEY = 'AIzaSyCHSXxaBYz6cEYOiU4XfaaurReMcCa0oT4';
 
 // Image Size
-const IMAGE_SIZE = '480x320';
+const IMAGE_SIZE = '560x320';
 
 // DOM Elements
 const $map = $('[data-map]');
@@ -24,9 +24,9 @@ const $buttonIsland = $('[data-button-island]');
 const $buttonPanorama = $('[data-button-panorama]');
 
 // Info
-const $info = $('[data-info]');
-const $infoImage = $('[data-info-image]');
-const $infoBody = $('[data-info-body]');
+const $info = $('[data-card]');
+const $infoImage = $('[data-card-image]');
+const $infoBody = $('[data-card-body]');
 const INIT_IMAGE_SRC = $infoImage.prop('src');
 const INIT_CONTENT = $infoBody.html();
 

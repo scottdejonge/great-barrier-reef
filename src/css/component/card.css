@@ -1,31 +1,32 @@
 .card {
-	display: block;
-	padding: 1.5rem;
-	color: $dark-grey;
-	text-decoration: none;
-	border: 1px solid $light-grey;
-
-	&:not(:last-child) {
-		margin-bottom: 2rem;
-	}
-
-	&:hover,
-	&:focus {
-		color: $primary;
-		text-decoration: none;
-		border: 1px solid $primary;
-	}
+	max-width: 100%;
 }
 
-	.card-title {
+	.card-image {
 		margin: 0;
-		font-family: $sans-serif;
-		font-weight: 400;
-		font-size: 1.6rem;
-		color: currentColor;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 
-	.card-description {
-		margin: 0.5em 0;
-		color: currentColor;
+	.card-body {
+		padding-top: 1rem;
+
+		h2 {
+			margin: 0;
+			font-size: 1.6rem;
+			color: currentColor;
+		}
+
+		p {
+			margin: 0.5em 0;
+			font-size: 1.2rem;
+			color: $grey;
+		}
+	}
+
+	.card-footer {
+		padding: 1rem 0;
 	}

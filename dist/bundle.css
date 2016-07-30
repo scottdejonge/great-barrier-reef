@@ -550,14 +550,10 @@ h3 {
 	font-weight: 400;
 }
 
-h3 + h4 {
-	margin-top: 0.5em;
-}
-
 h4 {
 	margin: 1em 0 0.5em;
-	font-size: 1.6rem;
-	font-weight: 500;
+	font-size: 1.4rem;
+	font-weight: 600;
 	text-transform: uppercase;
 }
 
@@ -687,26 +683,30 @@ dd {
 
 button, .button {
 	display: inline-block;
-	padding: 1em 1.5em;
+	padding: 0.6em 0.8em;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-	font-weight: 400;
-	font-size: 1.6rem;
+	font-weight: 600;
+	font-size: 1.2rem;
+	color: #333;
 	line-height: 1;
 	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.035em;
 	white-space: nowrap;
 	vertical-align: middle;
 	cursor: pointer;
 	user-select: none;
-	color: #FFF;
-	text-decoration: none;
-	background: #2A26EA;
-	border: none
+	background: #FFF;
+	border: 1px solid #DDD;
+	border-radius: 2px
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
-    color: #FFF;
+    color: #2A26EA;
     text-decoration: none;
-    background: #2A26EA;
+    background: #FFF;
+    border: 1px solid #2A26EA;
 }
 
 button:active, button.active, .button:active, .button.active {
@@ -885,6 +885,7 @@ nav a {
 
 .sidebar-body {
 		flex: 1 1 auto;
+		overflow: scroll;
 	}
 
 .sidebar-footer {
@@ -940,40 +941,52 @@ nav a {
  */
 
 .card {
-	display: block;
-	padding: 1.5rem;
-	color: #333;
-	text-decoration: none;
-	border: 1px solid #DDD
+	max-width: 100%;
 }
 
-.card:not(:last-child) {
-    margin-bottom: 2rem;
-}
-
-.card:hover, .card:focus {
-    color: #2A26EA;
-    text-decoration: none;
-    border: 1px solid #2A26EA;
-}
-
-.card-title {
+.card-image {
 		margin: 0;
-		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-		font-weight: 400;
-		font-size: 1.6rem;
-		color: currentColor;
 	}
 
-.card-description {
-		margin: 0.5em 0;
-		color: currentColor;
+.card-image img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+		padding-top: 1rem;
+	}
+
+.card-body h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: currentColor;
+}
+
+.card-body p {
+    margin: 0.5em 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.card-footer {
+		padding: 1rem 0;
 	}
 
 .filters {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.filters-title {
+	margin-bottom: 1em;
+	padding-bottom: 0.5em;
+	font-weight: 300;
+	font-size: 1.2rem;
+	color: #555;
+	letter-spacing: 0.1em;
+	border-bottom: 1px solid #DDD;
 }
 
 .filter {
@@ -1066,12 +1079,15 @@ nav a {
 	width: 44px;
 	height: 44px;
 	color: #333;
-	background: #FFF
+	background: #FFF;
+	border: none;
+	border-radius: 0
 }
 
 .toggle:hover, .toggle:focus {
     color: #222;
     background: #FFF;
+    border: none;
 }
 
 .toggle-bar {
@@ -1123,6 +1139,14 @@ nav a {
 	100% {
 		transform: rotate(360deg);
 	}
+}
+
+/**
+ * Utility
+ */
+
+.hide {
+	display: none;
 }
 
 /*# sourceMappingURL=bundle.css.map*/

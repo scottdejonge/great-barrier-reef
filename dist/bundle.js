@@ -19201,7 +19201,7 @@
 	 * Requires
 	 */
 	
-	var IMAGE_SIZE = '480x320';
+	var IMAGE_SIZE = '560x320';
 	
 	// DOM Elements
 	var $map = (0, _jquery2.default)('[data-map]');
@@ -19212,9 +19212,9 @@
 	var $buttonPanorama = (0, _jquery2.default)('[data-button-panorama]');
 	
 	// Info
-	var $info = (0, _jquery2.default)('[data-info]');
-	var $infoImage = (0, _jquery2.default)('[data-info-image]');
-	var $infoBody = (0, _jquery2.default)('[data-info-body]');
+	var $info = (0, _jquery2.default)('[data-card]');
+	var $infoImage = (0, _jquery2.default)('[data-card-image]');
+	var $infoBody = (0, _jquery2.default)('[data-card-body]');
 	var INIT_IMAGE_SRC = $infoImage.prop('src');
 	var INIT_CONTENT = $infoBody.html();
 	
