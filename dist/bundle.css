@@ -826,7 +826,7 @@ nav a {
 	width: 240px;
 	background: #FFF;
 	transform: translate3d(-100%, 0, 0);
-	transition: transform 100ms ease-in-out;
+	transition: transform 200ms ease-in-out;
 }
 
 .sidebar .toggle {
@@ -1019,7 +1019,7 @@ nav a {
 	cursor: pointer;
 	background: #DDD;
 	border-radius: 10px;
-	transition: background 100ms ease-in-out
+	transition: background 200ms ease-in-out
 }
 
 .switch.on {
@@ -1039,7 +1039,7 @@ nav a {
 		height: 16px;
 		border-radius: 8px;
 		background: #FFF;
-		transition: left 100ms ease-in-out;
+		transition: left 200ms ease-in-out;
 	}
 
 .toggle {
@@ -1061,7 +1061,7 @@ nav a {
 		width: 24px;
 		height: 2px;
 		background: currentColor;
-		transition: all 100ms ease-in-out;
+		transition: all 200ms ease-in-out;
 	}
 
 .toggle-open .toggle-bar {
