@@ -19538,7 +19538,7 @@
 		}
 	
 		if (marker.link && marker.content) {
-			content += '<p>' + marker.content + ' <a href="' + marker.link + '" target="_blank">(Read More)</a></p>';
+			content += '<p>' + marker.content + ' <a href="' + marker.link + '" target="_blank">Read More</a></p>';
 		} else if (marker.content) {
 			content += '<p>' + marker.content + '</p>';
 		}
