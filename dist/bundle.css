@@ -33,6 +33,23 @@
  */
 
 /**
+ * Fonts
+ */
+
+/* Regular */
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.eot');
+    src: url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('/great-barrier-reef/assets/fonts/leaguegothic-regular-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/**
  * Reset
  */
 
@@ -435,9 +452,9 @@ td, th {
 
 @media (max-width: 640px) {
 
-  :root {
-    font-size: 9px;
-  }
+    :root {
+        font-size: 9px;
+    }
 	}
 
 html {
@@ -447,7 +464,7 @@ html {
 body {
 	min-height: 100%;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-	color: #444;
+	color: #333;
 	background: #FFF;
 }
 
@@ -488,68 +505,90 @@ body {
  */
 
 h1, h2, h3 {
-	font-family: Georgia,"Times New Roman",serif;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	font-weight: normal;
-	color: #444;
+	color: #333;
 	line-height: 1.35;
-	letter-spacing: 0.005em
+	letter-spacing: 0.015em
 }
 
 h1:first-child, h2:first-child, h3:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 h1:last-child, h2:last-child, h3:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 h1 {
 	margin: 2em 0 0.5em;
 	font-size: 3.2rem;
+	font-weight: 400;
+}
+
+h1 + h2 {
+	margin-top: 0.5em;
 }
 
 h2 {
-	margin: 2em 0 0.5em;
-	font-size: 2.4rem;
+	margin: 2em 0 1em;
+	font-size: 2.8rem;
+	font-weight: 500;
+}
+
+h2 + h3 {
+	margin-top: 0.5em;
 }
 
 h3 {
+	margin: 2em 0 0.5em;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+h3 + h4 {
+	margin-top: 0.5em;
+}
+
+h4 {
 	margin: 1em 0 0.5em;
-	font-size: 2.0rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+	text-transform: uppercase;
 }
 
 a {
-	color: #177CAF;
+	color: #2A26EA;
 	text-decoration: underline
 }
 
 a:hover, a:focus {
-  color: #333;
-  text-decoration: underline;
+    color: #222;
+    text-decoration: underline;
 }
 
 a:visited {
 }
 
 p {
-	margin: 1.5em 0;
+	margin: 1em 0;
 	font-weight: 300;
 	font-size: 1.6rem;
-	color: #444;
+	color: #333;
 	line-height: 1.65
 }
 
 p:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 strong {
 	font-weight: 400;
-	color: #333;
+	color: #222;
 }
 
 ul, ol {
@@ -557,47 +596,47 @@ ul, ol {
 	padding: 0 0 0 1.5em;
 	font-weight: 300;
 	font-size: 1.6rem;
-	color: #444;
+	color: #333;
 	line-height: 1.5;
 }
 
 ul li, ol li {
-  margin: 0.5em 0
+    margin: 0.5em 0
 }
 
 ul li:first-child, ol li:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 ul li:last-child, ol li:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 ul:first-child, ol:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 ul:last-child, ol:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 hr {
 	height: 0;
 	margin: 8rem auto;
 	font-size: 1.6rem;
-	color: #444;
+	color: #333;
 	line-height: 1rem;
 	text-align: center;
 	border: none
 }
 
 hr::before {
-  margin-top: -1em;
-  margin-right: -1em;
-  font-style: italic;
-  font-size: 2rem;
-  content: "***";
-  letter-spacing: 1em;
+    margin-top: -1em;
+    margin-right: -1em;
+    font-style: italic;
+    font-size: 2rem;
+    content: "***";
+    letter-spacing: 1em;
 }
 
 dl {
@@ -614,10 +653,10 @@ dt, dd {
 
 @media (min-width: 640px) {
 
-  dt, dd {
-    display: inline;
-    margin: 0;
-  }
+    dt, dd {
+        display: inline;
+        margin: 0;
+    }
 	}
 
 dt {
@@ -629,13 +668,13 @@ dd {
 
 @media (min-width: 640px) {
 
-  dd {
-    display: inline;
-  }
+    dd {
+        display: inline;
+    }
 
-  dd:not(:last-child) {
-    margin-right: 0.5em;
-  }
+    dd:not(:last-child) {
+        margin-right: 0.5em;
+    }
 	}
 
 /**
@@ -656,21 +695,21 @@ button, .button {
 	user-select: none;
 	color: #FFF;
 	text-decoration: none;
-	background: #177CAF
+	background: #2A26EA
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
-  color: #FFF;
-  text-decoration: none;
-  background: #177CAF;
+    color: #FFF;
+    text-decoration: none;
+    background: #2A26EA;
 }
 
 button:active, button.active, .button:active, .button.active {
-  outline: 0;
+    outline: 0;
 }
 
 button.disabled, button:disabled, .button.disabled, .button:disabled {
-  opacity: 0.65;
+    opacity: 0.65;
 }
 
 /**
@@ -678,19 +717,19 @@ button.disabled, button:disabled, .button.disabled, .button:disabled {
  */
 
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-  display: block;
+    display: block;
 }
 
 /**
@@ -713,13 +752,13 @@ nav a {
 		}
 
 .header-title a {
-  color: #444;
-  text-decoration: none
+    color: #333;
+    text-decoration: none
 }
 
 .header-title a:hover, .header-title a:focus {
-  color: #444;
-  text-decoration: none;
+    color: #333;
+    text-decoration: none;
 }
 
 .navigation ul {
@@ -729,26 +768,43 @@ nav a {
 }
 
 .navigation a {
-  padding: 1rem 1.5rem;
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #444;
-  text-decoration: none
+    padding: 1rem 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #333;
+    text-decoration: none
 }
 
 .navigation a:hover, .navigation a:focus {
-  color: #177CAF;
-  text-decoration: none;
+    color: #2A26EA;
+    text-decoration: none;
 }
 
 .page-header {
-	padding: 5rem 0;
-	background: #177CAF;
+	padding: 15rem 0 5rem;
+	background-color: #2A26EA;
+	background-image: url('/great-barrier-reef/assets/images/pattern.svg');
+	background-size: 512px 512px;
 }
+
+.page-header-title, .page-header-subtitle {
+		margin: 0;
+		font-family: 'League Gothic';
+		font-weight: normal;
+		font-style: normal;
+		color: #FFF;
+		line-height: 1.2;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+	}
 
 .page-header-title {
 		max-width: 80rem;
-		color: #FFF;
+		font-size: 6.4rem;
+	}
+
+.page-header-subtitle {
+		font-size: 3.2rem;
 	}
 
 .main-content {
@@ -760,20 +816,20 @@ nav a {
 }
 
 .footer a {
-  display: inline-block;
-  font-size: 1.4rem;
-  color: #666;
-  text-decoration: none
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #555;
+    text-decoration: none
 }
 
 .footer a:hover, .footer a:focus {
-  color: #444;
-  text-decoration: underline;
+    color: #333;
+    text-decoration: underline;
 }
 
 .footer-copyright {
 		font-size: 1.4rem;
-		color: #444;
+		color: #333;
 	}
 
 .footer-navigation {
@@ -787,19 +843,19 @@ nav a {
 .policy {
 	display: block;
 	padding: 1.5rem;
-	color: #444;
+	color: #333;
 	text-decoration: none;
 	border: 1px solid #DDD
 }
 
 .policy:not(:last-child) {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .policy:hover, .policy:focus {
-  color: #177CAF;
-  text-decoration: none;
-  border: 1px solid #177CAF;
+    color: #2A26EA;
+    text-decoration: none;
+    border: 1px solid #2A26EA;
 }
 
 .policy-title {

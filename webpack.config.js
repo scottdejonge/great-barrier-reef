@@ -8,7 +8,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    bundle: './assets/index.js',
+    bundle: './src/index.js',
   },
   output: {
     path: __dirname + '/dist',
@@ -31,18 +31,18 @@ module.exports = {
           presets: ['es2015']
         },
         include: [
-          path.join(__dirname, 'assets'),
+          path.join(__dirname, 'src'),
         ]
       }, 
       {
         test: /\.json$/,
         loader: 'raw-loader',
-        include: path.join(__dirname, 'assets')
+        include: path.join(__dirname, 'src')
       },
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
-        include: path.join(__dirname, 'assets')
+        include: path.join(__dirname, 'src')
       },
       {
         test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?/,
@@ -56,7 +56,7 @@ module.exports = {
         browsers: ['last 2 versions']
       }),
       postcssImport({
-        path: './assets/css/*.css',
+        path: './src/css/*.css',
         addDependencyTo: webpack
       }),
       precss
