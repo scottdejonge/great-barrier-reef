@@ -23,22 +23,3 @@
 		background: currentColor;
 		transition: all $fast ease-in-out;
 	}
-
-.toggle-open {
-
-	.toggle-bar {
-
-		&:nth-child(1) {
-			transform: rotate(45deg);
-		}
-
-		&:nth-child(2) {
-			opacity: 0;
-		}
-
-		&:nth-child(3) {
-			margin-top: -12px;
-			transform: rotate(-45deg);
-		}
-	}
-}
