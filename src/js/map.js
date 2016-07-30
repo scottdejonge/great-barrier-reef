@@ -37,7 +37,7 @@ let bounds;
 let infowindow;
 let markers = [];
 let categories = [];
-let backgroundColor = '#27262D';
+let backgroundColor = '#EEEEEE';
 
 // Street View
 let panorama;

@@ -3,6 +3,7 @@
  */
 
 $fast: 100ms;
+$slow: 500ms;
 
 /* Margin */
 $m-xs: 1rem;
@@ -59,6 +60,12 @@ $c-m: $m-w-m;
 $c-l: $m-w-l;
 $c-xl: $m-w-xl;
 
+
+/**
+ * Components
+ */
+
+$spinner-size: 24px;
 
 /**
  * Typography

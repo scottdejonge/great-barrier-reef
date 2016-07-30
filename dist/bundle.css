@@ -29,6 +29,10 @@
 /* Container */
 
 /**
+ * Components
+ */
+
+/**
  * Typography
  */
 
@@ -874,6 +878,53 @@ nav a {
 .map {
 	width: 100vw;
 	height: 100vh;
+	background: #EEE;
+}
+
+.spinner {
+	position: relative
+}
+
+.spinner::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -(24px / 2);
+    margin-left: -(24px / 2);
+    width: 24px;
+    height: 24px;
+    content: '';
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #FFF;
+    animation: spin 500ms infinite linear;
+}
+
+/**
+ * Animation
+ */
+
+@-webkit-keyframes spin {
+
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 /*# sourceMappingURL=bundle.css.map*/

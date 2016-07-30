@@ -79,3 +79,11 @@
 
 @import './component/card';
 @import './component/map';
+@import './component/spinner';
+
+
+/**
+ * Animation
+ */
+
+@import './animation/spin';
