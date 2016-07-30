@@ -5,10 +5,14 @@
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
-	width: 360px;
+	width: 240px;
 	background: $white;
 	transform: translate3d(-100%, 0, 0);
 	transition: transform $fast ease-in-out;
+
+	@media (min-width: 1024px) {
+		width: 320px;
+	}
 
 	.toggle {
 		position: absolute;
