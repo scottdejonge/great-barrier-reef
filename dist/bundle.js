@@ -55,6 +55,10 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
+	var _toggle = __webpack_require__(/*! ./js/toggle */ 307);
+	
+	var Toggle = _interopRequireWildcard(_toggle);
+	
 	var _map = __webpack_require__(/*! ./js/map */ 299);
 	
 	var ReefMap = _interopRequireWildcard(_map);
@@ -77,6 +81,7 @@
 	 * Initialisation
 	 */
 	
+	Toggle.initialise();
 	ReefMap.initialise();
 
 /***/ },
@@ -19690,6 +19695,54 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */
+/*!**************************!*\
+  !*** ./src/js/toggle.js ***!
+  \**************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.initialise = initialise;
+	
+	var _jquery = __webpack_require__(/*! jquery */ 298);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	/**
+	 * Variables
+	 */
+	
+	var $body = (0, _jquery2.default)('body'); /**
+	                                            * Requires
+	                                            */
+	
+	var $toggle = (0, _jquery2.default)('[data-toggle]');
+	
+	/**
+	 * Initialisation
+	 */
+	
+	function initialise() {
+	
+	  $body.removeClass('toggle-open');
+	
+	  $toggle.on('click touchstart', function (event) {
+	    event.preventDefault();
+	
+	    $body.toggleClass('toggle-open');
+	  });
+	}
 
 /***/ }
 /******/ ]);

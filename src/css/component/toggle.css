@@ -1,0 +1,41 @@
+.toggle {
+	padding: 10px;
+	width: $toggle-size;
+	height: $toggle-size;
+	color: $dark-grey;
+	background: $white;
+
+	&:hover,
+	&:focus {
+		color: $dark;
+		background: $white;
+	}
+}
+
+	.toggle-bar {
+		display: block;
+		margin: 4px auto;
+		width: 24px;
+		height: 2px;
+		background: currentColor;
+		transition: all $fast ease-in-out;
+	}
+
+.toggle-open {
+
+	.toggle-bar {
+
+		&:nth-child(1) {
+			transform: rotate(45deg);
+		}
+
+		&:nth-child(2) {
+			opacity: 0;
+		}
+
+		&:nth-child(3) {
+			margin-top: -12px;
+			transform: rotate(-45deg);
+		}
+	}
+}

@@ -14,6 +14,7 @@ button,
 	color: $white;
 	text-decoration: none;
 	background: $primary;
+	border: none;
 
 	&:hover,
 	&:focus {

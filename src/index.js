@@ -12,6 +12,7 @@ import $ from 'jquery'
  * Modules
  */
 
+import * as Toggle from './js/toggle';
 import * as ReefMap from './js/map';
 
 
@@ -19,4 +20,5 @@ import * as ReefMap from './js/map';
  * Initialisation
  */
 
+Toggle.initialise();
 ReefMap.initialise();

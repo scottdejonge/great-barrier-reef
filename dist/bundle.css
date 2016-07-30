@@ -699,7 +699,8 @@ button, .button {
 	user-select: none;
 	color: #FFF;
 	text-decoration: none;
-	background: #2A26EA
+	background: #2A26EA;
+	border: none
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
@@ -899,13 +900,20 @@ nav a {
 		bottom: 0;
 		width: 360px;
 		background: #FFF;
+		transform: translate3d(-100%, 0, 0);
+		transition: transform 100ms ease-in-out;
 	}
 
-.map-filters-toggle {
-			position: absolute;
-			top: 0;
-			right: 0;
-		}
+.map-filters .toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: -44px;
+}
+
+.toggle-open .map-filters {
+    transform: translate3d(0, 0, 0);
+}
 
 .spinner {
 	position: relative
@@ -925,6 +933,44 @@ nav a {
     border: 3px solid rgba(0, 0, 0, 0.2);
     border-left-color: #FFF;
     animation: spin 500ms infinite linear;
+}
+
+.toggle {
+	padding: 10px;
+	width: 44px;
+	height: 44px;
+	color: #333;
+	background: #FFF
+}
+
+.toggle:hover, .toggle:focus {
+    color: #222;
+    background: #FFF;
+}
+
+.toggle-bar {
+		display: block;
+		margin: 4px auto;
+		width: 24px;
+		height: 2px;
+		background: currentColor;
+		transition: all 100ms ease-in-out;
+	}
+
+.toggle-open .toggle-bar {
+}
+
+.toggle-open .toggle-bar:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.toggle-open .toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-open .toggle-bar:nth-child(3) {
+    margin-top: -12px;
+    transform: rotate(-45deg);
 }
 
 /**

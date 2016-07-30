@@ -80,6 +80,7 @@
 @import './component/card';
 @import './component/map';
 @import './component/spinner';
+@import './component/toggle';
 
 
 /**
