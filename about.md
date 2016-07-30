@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+subtitle: Explore the Great Barrier Reef
 permalink: /about
 description: 
 ---
