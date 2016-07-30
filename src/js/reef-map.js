@@ -12,9 +12,6 @@ import $ from 'jquery'
 // API Key
 const API_KEY = 'AIzaSyCHSXxaBYz6cEYOiU4XfaaurReMcCa0oT4';
 
-// Site URL
-const SITE_URL = 'http://scottdejonge.com/great-barrier-reef/';
-
 // Image Size
 const IMAGE_SIZE = '480x320';
 
@@ -42,16 +39,6 @@ let markers = [];
 let categories = [];
 let backgroundColor = '#27262D';
 
-// KML Overlay
-let layers = [];
-const parkLayerUrl = SITE_URL + 'src/kml/marine-park.kml';
-const reefLayerUrl = SITE_URL + 'src/kml/reefs.kml';
-const islandsLayerUrl = SITE_URL + 'src/kml/islands.kml';
-const zonesEstuaryLayerUrl = SITE_URL + 'src/kml/zones-estuary.kml';
-const zonesIslandLayerUrl = SITE_URL + 'src/kml/zones-island.kml';
-const zonesLandLayerUrl = SITE_URL + 'src/kml/zones-land.kml';
-const zonesSeaLayerUrl = SITE_URL + 'src/kml/zones-sea.kml';
-
 // Street View
 let panorama;
 let StreetViewService;
@@ -65,10 +52,13 @@ const markerHeight = markerWidth;
 const $filter = $('[data-filter]');
 
 // Map Styles
-const mapStyles = JSON.parse(require('../json/styles.json'));
+const styles = JSON.parse(require('../json/styles.json'));
+
+// Map Layers
+const layers = JSON.parse(require('../json/layers.json'));
 
 // Map Locations
-let locations = JSON.parse(require('../json/locations.json'));
+const locations = JSON.parse(require('../json/locations.json'));
 
 
 /**
@@ -120,7 +110,7 @@ function createMap($map) {
 		streetViewControl: false,
 		overviewMapControl: false,
 		center: center,
-		styles: mapStyles,
+		styles: styles,
 		mapTypeId: google.maps.MapTypeId.HYBRID,
 		backgroundColor: backgroundColor
 	};
@@ -230,13 +220,9 @@ function createKMLOverlay() {
 		map: map
 	};
 
-	layers[0] = new google.maps.KmlLayer(parkLayerUrl, kmlOptions);
-	layers[1] = new google.maps.KmlLayer(reefLayerUrl, kmlOptions);
-	layers[2] = new google.maps.KmlLayer(islandsLayerUrl, kmlOptions);
-	layers[3] = new google.maps.KmlLayer(zonesEstuaryLayerUrl, kmlOptions);
-	layers[4] = new google.maps.KmlLayer(zonesIslandLayerUrl, kmlOptions);
-	layers[5] = new google.maps.KmlLayer(zonesLandLayerUrl, kmlOptions);
-	layers[6] = new google.maps.KmlLayer(zonesSeaLayerUrl, kmlOptions);
+	$.each(layers, function(i, layer) {
+		let mapLayer = new google.maps.KmlLayer(layer.url, kmlOptions);
+	});
 }
 
 
