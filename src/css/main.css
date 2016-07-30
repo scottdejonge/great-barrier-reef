@@ -70,6 +70,7 @@
 @import './template/navigation';
 @import './template/page-header';
 @import './template/main-content';
+@import './template/sidebar';
 @import './template/footer';
 
 

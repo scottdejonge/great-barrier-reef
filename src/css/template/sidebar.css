@@ -1,0 +1,73 @@
+.sidebar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	width: 360px;
+	background: $white;
+	transform: translate3d(-100%, 0, 0);
+	transition: transform $fast ease-in-out;
+
+	.toggle {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-right: -$toggle-size;
+	}
+}
+
+.toggle-open {
+
+	.sidebar {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+	.sidebar-header,
+	.sidebar-body,
+	.sidebar-footer {
+		padding: 2rem;
+	}
+
+	.sidebar-header {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		flex: 0 0 auto;
+		height: 160px;
+		background-color: $primary;
+		background-image: url('/src/images/pattern.svg');
+		background-size: 512px 512px;
+	}
+
+		.sidebar-header-title,
+		.sidebar-header-subtitle {
+			margin: 0;
+			font-family: 'League Gothic';
+			font-weight: normal;
+			font-style: normal;
+			color: $white;
+			line-height: 1;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+		}
+
+		.sidebar-header-title {
+			font-size: 3.6rem;
+			max-width: 120px;
+		}
+
+		.sidebar-header-subtitle {
+			font-size: 1.6rem;
+		}
+
+	.sidebar-body {
+		flex: 1 1 auto;
+	}
+
+	.sidebar-footer {
+		flex: 0 0 auto;
+		border-top: 1px solid $light-grey;
+	}

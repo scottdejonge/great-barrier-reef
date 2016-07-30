@@ -55,11 +55,11 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _toggle = __webpack_require__(/*! ./js/toggle */ 307);
+	var _toggle = __webpack_require__(/*! ./js/toggle */ 299);
 	
 	var Toggle = _interopRequireWildcard(_toggle);
 	
-	var _map = __webpack_require__(/*! ./js/map */ 299);
+	var _map = __webpack_require__(/*! ./js/map */ 300);
 	
 	var ReefMap = _interopRequireWildcard(_map);
 	
@@ -67,7 +67,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(/*! ./css/main.css */ 303);
+	__webpack_require__(/*! ./css/main.css */ 304);
 	
 	/*
 	 * Requires
@@ -19128,6 +19128,49 @@
 
 /***/ },
 /* 299 */
+/*!**************************!*\
+  !*** ./src/js/toggle.js ***!
+  \**************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.initialise = initialise;
+	
+	var _jquery = __webpack_require__(/*! jquery */ 298);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	/**
+	 * Variables
+	 */
+	
+	var $body = (0, _jquery2.default)('body'); /**
+	                                            * Requires
+	                                            */
+	
+	var $toggle = (0, _jquery2.default)('[data-toggle]');
+	
+	/**
+	 * Initialisation
+	 */
+	
+	function initialise() {
+	
+	  $toggle.on('click touchstart', function (event) {
+	    event.preventDefault();
+	
+	    $body.toggleClass('toggle-open');
+	  });
+	}
+
+/***/ },
+/* 300 */
 /*!***********************!*\
   !*** ./src/js/map.js ***!
   \***********************/
@@ -19197,13 +19240,13 @@
 	var $filter = (0, _jquery2.default)('[data-filter]');
 	
 	// Map Styles
-	var styles = JSON.parse(__webpack_require__(/*! ../json/styles.json */ 300));
+	var styles = JSON.parse(__webpack_require__(/*! ../json/styles.json */ 301));
 	
 	// Map Layers
-	var layers = JSON.parse(__webpack_require__(/*! ../json/layers.json */ 301));
+	var layers = JSON.parse(__webpack_require__(/*! ../json/layers.json */ 302));
 	
 	// Map Dives
-	var dives = JSON.parse(__webpack_require__(/*! ../json/dives.json */ 302));
+	var dives = JSON.parse(__webpack_require__(/*! ../json/dives.json */ 303));
 	
 	/**
 	 * Initialisation
@@ -19661,7 +19704,7 @@
 	};
 
 /***/ },
-/* 300 */
+/* 301 */
 /*!******************************!*\
   !*** ./src/json/styles.json ***!
   \******************************/
@@ -19670,16 +19713,16 @@
 	module.exports = "[\n  {\n    \"featureType\": \"all\",\n    \"elementType\": \"labels.text.fill\",\n    \"stylers\": [\n      {\n        \"visibility\": \"on\"\n      },\n      {\n        \"color\": \"#FFFFFF\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"all\",\n    \"elementType\": \"labels.text.stroke\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"all\",\n    \"elementType\": \"labels.icon\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"road\",\n    \"elementType\": \"all\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  },\n  {\n    \"featureType\": \"transit\",\n    \"elementType\": \"all\",\n    \"stylers\": [\n      {\n        \"visibility\": \"off\"\n      }\n    ]\n  }\n]"
 
 /***/ },
-/* 301 */
+/* 302 */
 /*!******************************!*\
   !*** ./src/json/layers.json ***!
   \******************************/
 /***/ function(module, exports) {
 
-	module.exports = "[\n  {\n    \"name\": \"park\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/marine-park.kml\"\n  },\n  {\n    \"name\": \"reefs\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/reefs.kml\"\n  },\n  {\n    \"name\": \"islands-a-l\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-a-l.kml\"\n  },\n  {\n    \"name\": \"islands-l-q\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-l-q.kml\"\n  },\n  {\n    \"name\": \"islands-q-z\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-q-z.kml\"\n  },\n  {\n    \"name\": \"estuary\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-estuary.kml\"\n  },\n  {\n    \"name\": \"island\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-island.kml\"\n  },\n  {\n    \"name\": \"land\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-land.kml\"\n  },\n  {\n    \"name\": \"sea\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-sea.kml\"\n  }\n]"
+	module.exports = "[\n  {\n    \"name\": \"park\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/marine-park.kml\"\n  },\n  {\n    \"name\": \"reefs\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/reefs.kml\"\n  },\n  {\n    \"name\": \"estuary\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-estuary.kml\"\n  },\n  {\n    \"name\": \"island\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-island.kml\"\n  },\n  {\n    \"name\": \"land\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-land.kml\"\n  },\n  {\n    \"name\": \"sea\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/zones-sea.kml\"\n  },\n  {\n    \"name\": \"islands-a-l\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-a-l.kml\"\n  },\n  {\n    \"name\": \"islands-l-q\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-l-q.kml\"\n  },\n  {\n    \"name\": \"islands-q-z\",\n    \"url\": \"http://greatbarrierreef.io/src/kml/islands-q-z.kml\"\n  }\n]"
 
 /***/ },
-/* 302 */
+/* 303 */
 /*!*****************************!*\
   !*** ./src/json/dives.json ***!
   \*****************************/
@@ -19688,61 +19731,13 @@
 	module.exports = "[\n  {\n    \"title\": \"Heron Island Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -23.442896,\n    \"lng\": 151.906584\n  },\n  {\n    \"title\": \"Wilson Island Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -23.303391,\n    \"lng\": 151.914955\n  },\n  {\n    \"title\": \"Lizard Island Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -14.685821,\n    \"lng\": 145.442162\n  },\n  {\n    \"title\": \"Mantis Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -12.209887,\n    \"lng\": 143.947125\n  },\n  {\n    \"title\": \"Opal Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -16.244786,\n    \"lng\": 145.867467\n  },\n  {\n    \"title\": \"Saunders Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -11.50642,\n    \"lng\": 144.094259\n  },\n  {\n    \"title\": \"Wishbone Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -12.100353,\n    \"lng\": 143.964604\n  },\n  {\n    \"title\": \"Tijou Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -13.069386,\n    \"lng\": 143.945836\n  },\n  {\n    \"title\": \"Ribbon Reef\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -14.920139,\n    \"lng\": 145.700062\n  },\n  {\n    \"title\": \"Great Detached Reef\",\n    \"streetViewId\": \"I2MBeyGDMAEAAAQfCaZWGQ\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -11.7194777293684,\n    \"lng\": 144.039688110352\n  },\n  {\n    \"title\": \"Yongala Shipwreck\",\n    \"streetViewId\": \"GbPknZsddS4AAAQfCaRxVg\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -19.294378,\n    \"lng\": 147.618642\n  },\n  {\n    \"title\": \"Lady Elliot Island Reef\",\n    \"streetViewId\": \"0n35W7TznTa2w83k3q1O-A\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -24.117052,\n    \"lng\": 152.709842\n  },\n  {\n    \"title\": \"North Broken Passage\",\n    \"streetViewId\": \"MGB3IbSxGxkAAAQfCa_m3w\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -13.921229,\n    \"lng\": 144.641367\n  },\n  {\n    \"title\": \"Tydeman Reef\",\n    \"streetViewId\": \"dor33dyWZuEAAAQfCarXFw\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -13.97303,\n    \"lng\": 144.501376\n  },\n  {\n    \"title\": \"Knife Reef\",\n    \"streetViewId\": \"tuQ-hEzC6zUAAAQfCa96Bg\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -18.585523,\n    \"lng\": 147.564247\n  },\n  {\n    \"title\": \"The Cod Hole\",\n    \"streetViewId\": \"Q7WM6yCJUkgAAAQfCbBQ-w\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -14.666769,\n    \"lng\": 145.660171\n  },\n  {\n    \"title\": \"Norman Reef\",\n    \"streetViewId\": \"U5OACYt--5UAAAQfCbAC4A\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -15.336161,\n    \"lng\": 145.784792\n  },\n  {\n    \"title\": \"St. Crispins Reef\",\n    \"streetViewId\": \"xXFiD1jApxEAAAQfCaZacg\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -16.074063,\n    \"lng\": 145.849884\n  },\n  {\n    \"title\": \"St. Crispins Reef\",\n    \"streetViewId\": \"xXFiD1jApxEAAAQfCaZacg\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -16.074063,\n    \"lng\": 145.849884\n  },\n  {\n    \"title\": \"Agincourt Reef\",\n    \"streetViewId\": \"R8sNWiq8ivUAAAQfCafEzw\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -16.032,\n    \"lng\": 145.858452\n  },\n  {\n    \"title\": \"Myrmidon Reef\",\n    \"streetViewId\": \"hvJbgfc-HtoAAAQfCaR8Mw\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -18.246795,\n    \"lng\": 147.386806\n  },\n  {\n    \"title\": \"Osprey Reef\",\n    \"streetViewId\": \"UC39RZSwIhYAAAQfCbAHrw\",\n    \"category\": \"dive\",\n    \"content\": \"\",\n    \"lat\": -13.805452,\n    \"lng\": 146.572458\n  }\n]"
 
 /***/ },
-/* 303 */
+/* 304 */
 /*!**************************!*\
   !*** ./src/css/main.css ***!
   \**************************/
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */
-/*!**************************!*\
-  !*** ./src/js/toggle.js ***!
-  \**************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.initialise = initialise;
-	
-	var _jquery = __webpack_require__(/*! jquery */ 298);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	/**
-	 * Variables
-	 */
-	
-	var $body = (0, _jquery2.default)('body'); /**
-	                                            * Requires
-	                                            */
-	
-	var $toggle = (0, _jquery2.default)('[data-toggle]');
-	
-	/**
-	 * Initialisation
-	 */
-	
-	function initialise() {
-	
-	  $body.removeClass('toggle-open');
-	
-	  $toggle.on('click touchstart', function (event) {
-	    event.preventDefault();
-	
-	    $body.toggleClass('toggle-open');
-	  });
-	}
 
 /***/ }
 /******/ ]);

@@ -18,8 +18,6 @@ const $toggle = $('[data-toggle]');
  */
 
 export function initialise() {
-	
-	$body.removeClass('toggle-open');
 
 	$toggle.on('click touchstart', function(event) {
 		event.preventDefault();
