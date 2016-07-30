@@ -14,7 +14,8 @@
   },
   "scripts": {
     "start": "npm run watch",
-    "svg": "svgo -f ./assets/glyphs --pretty",
+    "svg-glyphs": "svgo -f ./src/glyphs --pretty",
+    "svg-marker": "svgo -f ./src/marker --pretty",
     "watch": "webpack -d --watch",
     "build": "webpack -d",
     "deploy": "webpack -p"
