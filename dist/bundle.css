@@ -1089,12 +1089,21 @@ nav a {
 		position: absolute;
 		bottom: 0;
 		left: 50%;
-		margin-bottom: 5rem;
+		margin-bottom: 8rem;
 		margin-left: -9rem;
 	}
 
 .map-buttons button, .map-buttons .button {
+    position: absolute;
+    display: block;
     width: 18rem;
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.map-buttons button.hide, .map-buttons .button.hide {
+    opacity: 0;
+    transform: translateY(100%);
 }
 
 .modal {
@@ -1278,7 +1287,7 @@ nav a {
  */
 
 .hide {
-	display: none;
+	
 }
 
 /*# sourceMappingURL=bundle.css.map*/

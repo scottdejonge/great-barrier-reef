@@ -19,11 +19,20 @@
 		position: absolute;
 		bottom: 0;
 		left: 50%;
-		margin-bottom: $m-l;
+		margin-bottom: $m-xl;
 		margin-left: -9rem;
 		
 		button,
 		.button {
+			position: absolute;
+			display: block;
 			width: 18rem;
+			opacity: 1;
+			transform: translateY(0);
+
+			&.hide {
+				opacity: 0;
+				transform: translateY(100%);
+			}
 		}
 	}

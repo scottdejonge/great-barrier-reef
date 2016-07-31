@@ -22,6 +22,6 @@ export function initialise() {
 	$close.on('click touchstart', function(event) {
 		event.preventDefault();
 
-		$modal.addClass('hide');
+		$modal.hide();
 	})
 }
