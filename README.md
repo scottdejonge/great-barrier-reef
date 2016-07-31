@@ -1,6 +1,6 @@
 # Explore the Great Barrier Reef
 
-# About Explore the Great Barrier Reef
+## About Explore the Great Barrier Reef
 
 The Great Barrier Reef is the largest living ecosystem on Earth comprised of 2,900 unique reefs and 600 continental islands with more than 1,500 species of fish – 10% of the world’s fish species. Explore the Great Barrier Reef is an interactive education tool to better understand the scale and diversity of this natural wonder.
 
