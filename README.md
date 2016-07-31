@@ -2,6 +2,18 @@
 
 The Great Barrier Reef is the largest living ecosystem on Earth comprised of 2,900 unique reefs and 600 continental islands with more than 1,500 species of fish – 10% of the world’s fish species. Explore the Great Barrier Reef is an interactive education tool to better understand the scale and diversity of this natural wonder.
 
+## Data Story
+
+Explore the Great Barrier Reef uses geolocation datasets from the Queensland Government, mainly displaying KML onto Google Maps. During the process of getting the KML to display correctly it was clear that the size of the KML data would pose a problem.
+
+To overcome issues with KML display and rendering, data was stripped of excess CDATA tags and empty XML markup, then the KML files were parsed into Google's Fusion Tables for map visualisation checks removing excess tabular data not required for the display on the map.
+
+After cleaning the XML of any unnecessary markup, the KML was exported from Fusion Tables, reducing file size by top to 20%.
+
+Larger KML datasets such as Island data was chunked into smaller KML files selecting fragments of Island data by alphabetical chunks (e.g. A-L, L-Q, Q-Z).
+
+The purpose of displaying the KML data into a Google Maps interface is to inform the public to location of significance within the reef, including larger reef structures, main islands, and marine park zone boundaries. This highlights the scale and diversity of reef and islands as well as illustrates the main shipping travel routes through the reef into main ports such as Townsville.
+
 ## Data Sources
 
 ### [Great Barrier Reef coast marine park zoning](https://data.qld.gov.au/dataset/great-barrier-reef-coast-marine-park-zoning)
