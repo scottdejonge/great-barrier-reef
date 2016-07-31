@@ -61,9 +61,12 @@ This dataset displays the marine islands of Queensland. Marine islands are those
   * PostCSS
 * Webpack
 
-## Roadmap
+## Creators
 
-* Expand
+### Scott de Jonge
+
+* Twitter: [@scottdejonge](https://twitter.com/scottdejonge)
+* Github: [@scottdejonge](https://github.com/scottdejonge)
 
 [^1]: https://en.wikipedia.org/wiki/Great_Barrier_Reef
 [^2]: https://www.barrierreef.org/the-reef/the-facts#Reef-habitats
