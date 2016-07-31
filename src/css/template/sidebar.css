@@ -38,26 +38,27 @@
 		height: 150px;
 	}
 
-		.sidebar-header-title,
-		.sidebar-header-subtitle {
+		.sidebar-header-title {
 			margin: 0;
 			font-family: 'League Gothic';
 			font-weight: normal;
-			font-style: normal;
 			color: $white;
 			line-height: 1;
 			letter-spacing: 0.15em;
 			text-transform: uppercase;
-		}
 
-		.sidebar-header-title {
-			font-size: 3.6rem;
-			max-width: 120px;
-		}
+			small {
+				display: block;
+				margin-bottom: 0.2em;
+				font-size: 1.6rem;
+			}
 
-		.sidebar-header-subtitle {
-			margin-bottom: 0.2em;
-			font-size: 1.6rem;
+			em {
+				display: block;
+				max-width: 120px;
+				font-size: 3.6rem;
+				font-style: normal;
+			}
 		}
 
 	.sidebar-body {
