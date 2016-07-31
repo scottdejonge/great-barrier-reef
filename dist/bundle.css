@@ -1093,16 +1093,10 @@ nav a {
 	padding: 10px;
 	width: 44px;
 	height: 44px;
-	color: #333;
-	background: #FFF;
-	border: none;
 	border-radius: 0
 }
 
 .toggle:hover, .toggle:focus {
-    color: #222;
-    background: #FFF;
-    border: none;
 }
 
 .toggle-bar {
@@ -1113,6 +1107,22 @@ nav a {
 		background: currentColor;
 		transition: all 200ms ease-in-out;
 	}
+
+.toggle-open .toggle-bar {
+}
+
+.toggle-open .toggle-bar:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.toggle-open .toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-open .toggle-bar:nth-child(3) {
+    margin-top: -12px;
+    transform: rotate(-45deg);
+}
 
 /**
  * Animation
