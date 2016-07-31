@@ -1,10 +1,5 @@
 .page-header {
 	padding: 15rem 0 5rem;
-	background-color: $primary;
-	background-image: url('/src/images/pattern.svg');
-	background-size: 512px 500px;
-	background-position: top left;
-	background-repeat: repeat;
 }
 
 	.page-header-title,
