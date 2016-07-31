@@ -761,6 +761,27 @@ button.disabled, button:disabled, .button.disabled, .button:disabled {
  * Element
  */
 
+.media {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+.media > svg, .media > img, .media > video, .media > iframe {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.media-16-9 {
+	padding-top: 56.25%;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
@@ -1072,7 +1093,6 @@ nav a {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-	background: #EEE;
 }
 
 .map-canvas {
@@ -1171,7 +1191,8 @@ nav a {
 }
 
 .spinner {
-	position: relative
+	position: relative;
+	background: #EEE
 }
 
 .spinner::before {
