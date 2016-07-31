@@ -1,5 +1,6 @@
 .spinner {
 	position: relative;
+	background: $light;
 
 	&::before {
 		display: block;
