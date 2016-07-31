@@ -1,16 +1,13 @@
 .feature {
 	display: flex;
 	align-items: center;
-
-	&:not(:last-child) {
-		margin-bottom: $m-m;
-	}
+	margin: $m-s 0;
 }
 	
 	.feature-image {
 		flex: 0 0 auto;
 		margin: 0;
-		margin-right: $gutter;
+		margin-right: $m-s;
 	}
 	
 	.feature-body {
@@ -18,10 +15,13 @@
 	}
 
 		.feature-title {
-			margin: 0;
-			font-size: 1.8rem;
+			margin: 0 0 0.5em;
+			font-size: 1.4rem;
+			font-weight: 600;
+			text-transform: uppercase;
 		}
 
 		.feature-description {
 			margin: 0;
+			font-size: 1.4rem;
 		}

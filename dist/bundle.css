@@ -536,7 +536,7 @@ h1 + h2 {
 
 h2 {
 	margin: 2em 0 1em;
-	font-size: 2.8rem;
+	font-size: 2.4rem;
 	font-weight: 500;
 }
 
@@ -620,6 +620,30 @@ ul:last-child, ol:last-child {
     margin-bottom: 0;
 }
 
+.footnotes {
+	margin-top: 10rem;
+}
+
+.footnotes ol {
+    padding: 0 0 0 2rem;
+}
+
+.footnotes ol li, .footnotes ol p, .footnotes ol a {
+    font-size: 1.2rem;
+    color: #555
+}
+
+.footnotes::before {
+    position: absolute;
+    left: 50%;
+    margin-top: -5rem;
+    margin-left: -4rem;
+    content: '';
+    width: 8rem;
+    height: 2px;
+    background: #DDD;
+}
+
 hr {
 	height: 0;
 	margin: 8rem auto;
@@ -637,6 +661,10 @@ hr::before {
     font-size: 2rem;
     content: "***";
     letter-spacing: 1em;
+}
+
+sup a {
+    text-decoration: none;
 }
 
 dl {
@@ -977,17 +1005,14 @@ nav a {
 
 .feature {
 	display: flex;
-	align-items: center
-}
-
-.feature:not(:last-child) {
-    margin-bottom: 3rem;
+	align-items: center;
+	margin: 2rem 0;
 }
 
 .feature-image {
 		flex: 0 0 auto;
 		margin: 0;
-		margin-right: 1.5rem;
+		margin-right: 2rem;
 	}
 
 .feature-body {
@@ -995,12 +1020,15 @@ nav a {
 	}
 
 .feature-title {
-			margin: 0;
-			font-size: 1.8rem;
+			margin: 0 0 0.5em;
+			font-size: 1.4rem;
+			font-weight: 600;
+			text-transform: uppercase;
 		}
 
 .feature-description {
 			margin: 0;
+			font-size: 1.4rem;
 		}
 
 .filters {
@@ -1116,7 +1144,7 @@ nav a {
 
 .modal-footer {
 			margin: 0 2rem;
-			padding: 2rem;
+			padding: 0 2rem 3rem;
 			background: #FFF;
 			text-align: center;
 		}

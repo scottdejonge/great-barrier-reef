@@ -6,29 +6,11 @@ permalink: /about
 description: 
 ---
 
-The Great Barrier Reef is the largest living ecosystem on Earth. Explore the Great Barrier Reef is an interactive education tool to better understand the scale and diversity of this natural wonder. Explore the Great Barrier Reef allows you to dive into the reef through virtual dives to see coral structures and sea life up close. Discover the scale of the Great Barrier Reef by navigating through the 2,300km-long ecosystem, thousands of reefs, and hundreds of islands.
+## About Explore the Great Barrier Reef
 
-## Technology
+The Great Barrier Reef is the largest living ecosystem on Earth[^1] comprised of 2,900 unique reefs and 600 continental islands[^2] with 1,625 species of fish – 10% of the world’s fish species[^3]. Explore the Great Barrier Reef is an interactive education tool to better understand the scale and diversity of this natural wonder.
 
-* Jekyll
-* Markdown
-* Webpack
-
-## Acknowledgements
-
-### Icons
-
-[Mohamad Sabbagh](https://thenounproject.com/Jetro/) Creative Commons from the [Noun Project](https://thenounproject.com/Msabbagh/collection/the-sea/?oq=reef&cidx=0&i=97733)
-
-### Images
-
-#### Underwater photo
-
-[Kyle Taylor](https://www.flickr.com/photos/kyletaylor/) Attribution 2.0 Generic [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) 
-
-#### Aerial photo
-
-[FarbenfroheWunderwelt](https://www.flickr.com/photos/farbenfrohewunderwelt/) Attribution-NoDerivs 2.0 Generic [CC BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/) 
+{% include features.html %}
 
 ## Data Sources
 
@@ -50,6 +32,41 @@ This dataset displays the marine islands of Queensland. Marine islands are those
 
 <https://data.qld.gov.au/dataset/marine-islands-queensland>
 
+## Acknowledgements
+
+### Icons
+
+[Mohamad Sabbagh](https://thenounproject.com/Jetro/) Creative Commons from the [Noun Project](https://thenounproject.com/Msabbagh/collection/the-sea/?oq=reef&cidx=0&i=97733)
+
+### Images
+
+#### Underwater photo
+
+[Kyle Taylor](https://www.flickr.com/photos/kyletaylor/) Attribution 2.0 Generic [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) 
+
+#### Aerial photo
+
+[FarbenfroheWunderwelt](https://www.flickr.com/photos/farbenfrohewunderwelt/) Attribution-NoDerivs 2.0 Generic [CC BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/) 
+
+## Technology
+
+* GitHub
+  * Github Pages
+* Jekyll
+* Markdown
+* Google Maps
+* KML
+* HTML
+* Javascript
+  * JQuery
+* CSS
+  * PostCSS
+* Webpack
+
 ## Roadmap
 
 * Expand
+
+[^1]: https://en.wikipedia.org/wiki/Great_Barrier_Reef
+[^2]: https://www.barrierreef.org/the-reef/the-facts#Reef-habitats
+[^3]: https://www.barrierreef.org/the-reef/the-facts#Reef-residents

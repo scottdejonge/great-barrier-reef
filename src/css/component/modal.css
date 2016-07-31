@@ -49,7 +49,7 @@
 
 		.modal-footer {
 			margin: 0 $m-s;
-			padding: $p-s;
+			padding: 0 $p-s $p-m;
 			background: $white;
 			text-align: center;
 		}
