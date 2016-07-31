@@ -29,21 +29,18 @@
 	}
 }
 
-	.sidebar-header,
-	.sidebar-body,
-	.sidebar-footer {
-		padding: 2rem;
-	}
-
 	.sidebar-header {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		flex: 0 0 auto;
-		height: 160px;
+		padding: $p-s;
+		height: 150px;
 		background-color: $primary;
 		background-image: url('/src/images/pattern.svg');
-		background-size: 512px 512px;
+		background-size: 512px 500px;
+		background-position: top left;
+		background-repeat: repeat;
 	}
 
 		.sidebar-header-title,
@@ -70,11 +67,13 @@
 
 	.sidebar-body {
 		flex: 1 1 auto;
+		padding: $p-s;
 		overflow: scroll;
 	}
 
 	.sidebar-footer {
 		flex: 0 0 auto;
+		padding: $p-xs $p-s;
 		align-items: center;
 		border-top: 1px solid $light-grey;
 	}

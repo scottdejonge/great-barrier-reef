@@ -789,7 +789,9 @@ nav a {
 	padding: 15rem 0 5rem;
 	background-color: #2A26EA;
 	background-image: url('/src/images/pattern.svg');
-	background-size: 512px 512px;
+	background-size: 512px 500px;
+	background-position: top left;
+	background-repeat: repeat;
 }
 
 .page-header-title, .page-header-subtitle {
@@ -847,19 +849,18 @@ nav a {
     transform: translate3d(0, 0, 0);
 }
 
-.sidebar-header, .sidebar-body, .sidebar-footer {
-		padding: 2rem;
-	}
-
 .sidebar-header {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		flex: 0 0 auto;
-		height: 160px;
+		padding: 2rem;
+		height: 150px;
 		background-color: #2A26EA;
 		background-image: url('/src/images/pattern.svg');
-		background-size: 512px 512px;
+		background-size: 512px 500px;
+		background-position: top left;
+		background-repeat: repeat;
 	}
 
 .sidebar-header-title, .sidebar-header-subtitle {
@@ -885,11 +886,13 @@ nav a {
 
 .sidebar-body {
 		flex: 1 1 auto;
+		padding: 2rem;
 		overflow: scroll;
 	}
 
 .sidebar-footer {
 		flex: 0 0 auto;
+		padding: 1rem 2rem;
 		align-items: center;
 		border-top: 1px solid #DDD;
 	}
