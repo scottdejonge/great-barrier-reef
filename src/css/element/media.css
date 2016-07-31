@@ -1,6 +1,7 @@
 .media {
-	display: block;
 	position: relative;
+	display: block;
+	margin: $m-m 0;
 	overflow: hidden;
 	
 	> svg,
