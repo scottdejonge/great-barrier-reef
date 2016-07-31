@@ -8,7 +8,7 @@ description:
 
 ## About Explore the Great Barrier Reef
 
-The Great Barrier Reef is the largest living ecosystem on Earth[^1] comprised of 2,900 unique reefs and 600 continental islands[^2] with 1,625 species of fish – 10% of the world’s fish species[^3]. Explore the Great Barrier Reef is an interactive education tool to better understand the scale and diversity of this natural wonder.
+The Great Barrier Reef is the largest living ecosystem on Earth[^1] comprised of 2,900 unique reefs and 600 continental islands[^2] with more than 1,500 species of fish – 10% of the world’s fish species[^3]. Explore the Great Barrier Reef is an interactive education tool to better understand the scale and diversity of this natural wonder.
 
 <div class="media media-16-9 spinner">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/16aYr5jRjdc" frameborder="0" allowfullscreen></iframe>
@@ -77,5 +77,5 @@ This dataset displays the marine islands of Queensland. Marine islands are those
 * Github: [@scottdejonge](https://github.com/scottdejonge)
 
 [^1]: https://en.wikipedia.org/wiki/Great_Barrier_Reef
-[^2]: https://www.barrierreef.org/the-reef/the-facts#Reef-habitats
-[^3]: https://www.barrierreef.org/the-reef/the-facts#Reef-residents
+[^2]: https://en.wikipedia.org/wiki/Great_Barrier_Reef#cite_note-3
+[^3]: https://en.wikipedia.org/wiki/Great_Barrier_Reef#cite_note-CRC_species-38
