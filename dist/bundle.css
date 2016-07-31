@@ -762,8 +762,9 @@ button.disabled, button:disabled, .button.disabled, .button:disabled {
  */
 
 .media {
-	display: block;
 	position: relative;
+	display: block;
+	margin: 3rem 0;
 	overflow: hidden;
 }
 
@@ -906,6 +907,7 @@ nav a {
 }
 
 .sidebar-header {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -914,25 +916,36 @@ nav a {
 		height: 150px;
 	}
 
-.sidebar-header-title, .sidebar-header-subtitle {
+.sidebar-header-title {
 			margin: 0;
 			font-family: 'League Gothic';
 			font-weight: normal;
-			font-style: normal;
 			color: #FFF;
 			line-height: 1;
 			letter-spacing: 0.15em;
 			text-transform: uppercase;
 		}
 
-.sidebar-header-title {
-			font-size: 3.6rem;
-			max-width: 120px;
-		}
+.sidebar-header-title small {
+    display: block;
+    margin-bottom: 0.2em;
+    font-size: 1.6rem;
+}
 
-.sidebar-header-subtitle {
-			margin-bottom: 0.2em;
-			font-size: 1.6rem;
+.sidebar-header-title em {
+    display: block;
+    max-width: 120px;
+    font-size: 3.6rem;
+    font-style: normal;
+}
+
+.sidebar-header-link {
+			display: block;
+			position: absolute;
+			bottom: 2rem;
+			right: 2rem;
+			width: 24px;
+			height: 24px;
 		}
 
 .sidebar-body {

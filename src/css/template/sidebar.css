@@ -30,6 +30,7 @@
 }
 
 	.sidebar-header {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -59,6 +60,15 @@
 				font-size: 3.6rem;
 				font-style: normal;
 			}
+		}
+
+		.sidebar-header-link {
+			display: block;
+			position: absolute;
+			bottom: $m-s;
+			right: $m-s;
+			width: 24px;
+			height: 24px;
 		}
 
 	.sidebar-body {
