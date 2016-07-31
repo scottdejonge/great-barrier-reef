@@ -44,7 +44,9 @@
 @import './typography/paragraph';
 @import './typography/strong';
 @import './typography/list';
+@import './typography/footnotes';
 @import './typography/hr';
+@import './typography/sup';
 @import './typography/definition-list';
 
 

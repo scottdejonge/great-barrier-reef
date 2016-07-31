@@ -1,0 +1,25 @@
+.footnotes {
+	margin-top: 10rem;
+
+	&::before {
+		position: absolute;
+		left: 50%;
+		margin-top: -5rem;
+		margin-left: -4rem;
+		content: '';
+		width: 8rem;
+		height: 2px;
+		background: $light-grey;
+	}
+	
+	ol {
+		padding: 0 0 0 2rem;
+
+		li,
+		p,
+		a {
+			font-size: 1.2rem;
+			color: $grey
+		}
+	}
+}
