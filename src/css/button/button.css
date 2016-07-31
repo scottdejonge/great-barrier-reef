@@ -14,17 +14,17 @@ button,
 	vertical-align: middle;
 	cursor: pointer;
 	user-select: none;
-	color: $white;
-	background: $primary;
+	color: $primary;
+	background: $white;
 	border-radius: 30px;
 	border: none;
 	transition: all $fast ease-in-out;
 
 	&:hover,
 	&:focus {
-		color: $white;
+		color: $secondary;
 		text-decoration: none;
-		background: $secondary;
+		background: $white;
 	}
 
 	&:active,
@@ -44,4 +44,15 @@ button,
 
 .button-xl {
 	font-size: 1.6rem;
+}
+
+.button-primary {
+	color: $white;
+	background: $primary;
+
+	&:hover,
+	&:focus {
+		color: $white;
+		background: $secondary;
+	}
 }

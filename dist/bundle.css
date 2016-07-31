@@ -728,17 +728,17 @@ button, .button {
 	vertical-align: middle;
 	cursor: pointer;
 	user-select: none;
-	color: #FFF;
-	background: #2A26EA;
+	color: #2A26EA;
+	background: #FFF;
 	border-radius: 30px;
 	border: none;
 	transition: all 200ms ease-in-out
 }
 
 button:hover, button:focus, .button:hover, .button:focus {
-    color: #FFF;
+    color: #1815B7;
     text-decoration: none;
-    background: #1815B7;
+    background: #FFF;
 }
 
 button:active, button.active, .button:active, .button.active {
@@ -755,6 +755,16 @@ button.disabled, button:disabled, .button.disabled, .button:disabled {
 
 .button-xl {
 	font-size: 1.6rem;
+}
+
+.button-primary {
+	color: #FFF;
+	background: #2A26EA
+}
+
+.button-primary:hover, .button-primary:focus {
+    color: #FFF;
+    background: #1815B7;
 }
 
 /**
