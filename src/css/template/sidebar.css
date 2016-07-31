@@ -64,6 +64,7 @@
 		flex: 1 1 auto;
 		padding: $p-s;
 		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.sidebar-footer {

@@ -717,6 +717,14 @@ button.disabled, button:disabled, .button.disabled, .button:disabled {
     opacity: 0.65;
 }
 
+.button-l {
+	font-size: 1.4rem;
+}
+
+.button-xl {
+	font-size: 1.6rem;
+}
+
 /**
  * Element
  */
@@ -787,11 +795,6 @@ nav a {
 
 .page-header {
 	padding: 15rem 0 5rem;
-	background-color: #2A26EA;
-	background-image: url('/src/images/pattern.svg');
-	background-size: 512px 500px;
-	background-position: top left;
-	background-repeat: repeat;
 }
 
 .page-header-title, .page-header-subtitle {
@@ -856,11 +859,6 @@ nav a {
 		flex: 0 0 auto;
 		padding: 2rem;
 		height: 150px;
-		background-color: #2A26EA;
-		background-image: url('/src/images/pattern.svg');
-		background-size: 512px 500px;
-		background-position: top left;
-		background-repeat: repeat;
 	}
 
 .sidebar-header-title, .sidebar-header-subtitle {
@@ -888,6 +886,7 @@ nav a {
 		flex: 1 1 auto;
 		padding: 2rem;
 		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 
 .sidebar-footer {
@@ -976,6 +975,34 @@ nav a {
 		padding: 1rem 0;
 	}
 
+.feature {
+	display: flex;
+	align-items: center
+}
+
+.feature:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.feature-image {
+		flex: 0 0 auto;
+		margin: 0;
+		margin-right: 1.5rem;
+	}
+
+.feature-body {
+		flex: 1 1 auto;
+	}
+
+.feature-title {
+			margin: 0;
+			font-size: 1.8rem;
+		}
+
+.feature-description {
+			margin: 0;
+		}
+
 .filters {
 	margin: 0;
 	padding: 0;
@@ -1036,6 +1063,70 @@ nav a {
 
 .map-buttons button, .map-buttons .button {
     width: 18rem;
+}
+
+.modal {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.modal-inner {
+		margin: 0 auto;
+		padding: 5rem 0;
+		max-width: 64rem;
+	}
+
+.modal-header {
+			padding: 2rem;
+		}
+
+.modal-title {
+				margin: 0;
+				font-family: 'League Gothic';
+				font-weight: normal;
+				color: #FFF;
+				line-height: 1;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+			}
+
+.modal-title small {
+    display: block;
+    margin-bottom: 0.2em;
+    font-size: 1.6rem;
+}
+
+.modal-title em {
+    display: block;
+    font-size: 3.6rem;
+    font-style: normal;
+}
+
+.modal-body {
+			margin: 0 2rem;
+			padding: 2rem;
+			background: #FFF;
+		}
+
+.modal-footer {
+			margin: 0 2rem;
+			padding: 2rem;
+			background: #FFF;
+			text-align: center;
+		}
+
+.pattern {
+	background-color: #2A26EA;
+	background-image: url('/src/images/pattern.svg');
+	background-size: 512px 500px;
+	background-position: top left;
+	background-repeat: repeat;
 }
 
 .spinner {

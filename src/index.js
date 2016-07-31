@@ -13,6 +13,7 @@ import $ from 'jquery'
  */
 
 import * as Toggle from './js/toggle';
+import * as Modal from './js/modal';
 import * as ReefMap from './js/map';
 
 
@@ -21,4 +22,5 @@ import * as ReefMap from './js/map';
  */
 
 Toggle.initialise();
+Modal.initialise();
 ReefMap.initialise();

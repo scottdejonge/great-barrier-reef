@@ -1,0 +1,27 @@
+.feature {
+	display: flex;
+	align-items: center;
+
+	&:not(:last-child) {
+		margin-bottom: $m-m;
+	}
+}
+	
+	.feature-image {
+		flex: 0 0 auto;
+		margin: 0;
+		margin-right: $gutter;
+	}
+	
+	.feature-body {
+		flex: 1 1 auto;
+	}
+
+		.feature-title {
+			margin: 0;
+			font-size: 1.8rem;
+		}
+
+		.feature-description {
+			margin: 0;
+		}

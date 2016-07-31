@@ -1,0 +1,55 @@
+.modal {
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+	.modal-inner {
+		margin: 0 auto;
+		padding: $p-l 0;
+		max-width: $m-w-m;
+	}
+
+		.modal-header {
+			padding: $p-s;
+		}
+
+			.modal-title {
+				margin: 0;
+				font-family: 'League Gothic';
+				font-weight: normal;
+				color: $white;
+				line-height: 1;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+
+				small {
+					display: block;
+					margin-bottom: 0.2em;
+					font-size: 1.6rem;
+				}
+
+				em {
+					display: block;
+					font-size: 3.6rem;
+					font-style: normal;
+				}
+			}
+
+		.modal-body {
+			margin: 0 $m-s;
+			padding: $p-s;
+			background: $white;
+		}
+
+		.modal-footer {
+			margin: 0 $m-s;
+			padding: $p-s;
+			background: $white;
+			text-align: center;
+		}

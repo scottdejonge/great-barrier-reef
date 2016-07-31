@@ -59,6 +59,10 @@
 	
 	var Toggle = _interopRequireWildcard(_toggle);
 	
+	var _modal = __webpack_require__(/*! ./js/modal */ 308);
+	
+	var Modal = _interopRequireWildcard(_modal);
+	
 	var _map = __webpack_require__(/*! ./js/map */ 300);
 	
 	var ReefMap = _interopRequireWildcard(_map);
@@ -82,6 +86,7 @@
 	 */
 	
 	Toggle.initialise();
+	Modal.initialise();
 	ReefMap.initialise();
 
 /***/ },
@@ -19784,6 +19789,52 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */
+/*!*************************!*\
+  !*** ./src/js/modal.js ***!
+  \*************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.initialise = initialise;
+	
+	var _jquery = __webpack_require__(/*! jquery */ 298);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	/**
+	 * Variables
+	 */
+	
+	var $modal = (0, _jquery2.default)('[ data-modal]'); /**
+	                                                      * Requires
+	                                                      */
+	
+	var $close = (0, _jquery2.default)('[ data-modal-close]');
+	
+	/**
+	 * Initialisation
+	 */
+	
+	function initialise() {
+	
+	  $close.on('click touchstart', function (event) {
+	    event.preventDefault();
+	
+	    $modal.addClass('hide');
+	  });
+	}
 
 /***/ }
 /******/ ]);

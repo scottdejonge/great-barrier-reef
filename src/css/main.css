@@ -79,8 +79,10 @@
  */
 
 @import './component/card';
+@import './component/feature';
 @import './component/filter';
 @import './component/map';
+@import './component/modal';
 @import './component/pattern';
 @import './component/spinner';
 @import './component/switch';
