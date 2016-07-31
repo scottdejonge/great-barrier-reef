@@ -466,6 +466,7 @@ html {
 }
 
 body {
+	height: 100%;
 	min-height: 100%;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	color: #333;
@@ -1114,8 +1115,8 @@ nav a {
 
 .map {
 	position: relative;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 }
 
 .map-canvas {
