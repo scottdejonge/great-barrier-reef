@@ -513,7 +513,11 @@ h1, h2, h3 {
 	font-weight: normal;
 	color: #333;
 	line-height: 1.35;
-	letter-spacing: 0.015em
+	letter-spacing: 0.015em;
+}
+
+h1 a, h2 a, h3 a {
+    text-decoration: none;
 }
 
 h1:first-child, h2:first-child, h3:first-child {

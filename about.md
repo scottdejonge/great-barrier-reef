@@ -14,25 +14,23 @@ The Great Barrier Reef is the largest living ecosystem on Earth[^1] comprised of
 
 ## Data Sources
 
-### Great Barrier Reef coast marine park zoning
+### [Great Barrier Reef coast marine park zoning](https://data.qld.gov.au/dataset/great-barrier-reef-coast-marine-park-zoning)
 
 Zonings within Queensland State Marine Park - Great Barrier Reef Coast Marine Park.
 
-<https://data.qld.gov.au/dataset/great-barrier-reef-coast-marine-park-zoning>
-
-### Geographic features - Queensland series
+### [Geographic features - Queensland series](https://data.qld.gov.au/dataset/geographic-features-queensland-series)
 
 This is a series of datasets covering the State of Queensland displaying geographic features. Features are attributed with source information and names where available. Datasets include: - Bays including Bays, Coves, Gulfs etc., Large Area Features including Deserts, Peninsulas etc., Mountain Ranges, Beaches, Sea Passages, Mountain Peaks, Capes including Capes, Points, Head, Mainland, Marine Islands, Reefs and Shoals, Island Groups, Highest Astronomical Tide
 
-<https://data.qld.gov.au/dataset/geographic-features-queensland-series>
-
-### Marine islands - Queensland
+### [Marine islands - Queensland](https://data.qld.gov.au/dataset/marine-islands-queensland)
 
 This dataset displays the marine islands of Queensland. Marine islands are those islands beyond the Queensland mainland and their boundary coincides with the Coastline and State Border - Queensland dataset.Attributes within the Coastline and State Border - Queensland dataset describe the source used in compiling that dataset. Island names have been sourced from numerous locations and attributes within the data describe the source of the names and includes names obtained from:- Queensland Place Names Database- Queensland Government publications- Geoscience Australia 1:100000 Topographic Mapping- Geoscience Australia 1:250000 Topographic Mapping
 
-<https://data.qld.gov.au/dataset/marine-islands-queensland>
-
 ## Acknowledgements
+
+### Underwater Images
+
+[XL Catlin Seaview Survey](http://catlinseaviewsurvey.com/) through [Google Maps](https://www.google.com.au/maps/)
 
 ### Icons
 
