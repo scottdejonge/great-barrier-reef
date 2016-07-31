@@ -1,7 +1,7 @@
 # Site settings
 title: Great Barrier Reef
 email: dejonge.scott@gmail.com
-description: 
+description: "Explore the Great Barrier Reef is an interactive education tool to better understand the scale and diversity of this natural wonder."
 
 # Server
 baseurl: ""
