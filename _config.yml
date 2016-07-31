@@ -8,7 +8,7 @@ baseurl: ""
 destination: _site
 host: 0.0.0.0
 port: 4001
-url: http://scottdejonge.github.io
+url: http://greatbarrierreef.io
 encoding: UTF-8
 
 # Excludes
